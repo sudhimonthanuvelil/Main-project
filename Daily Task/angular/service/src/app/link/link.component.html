@@ -1,0 +1,8 @@
+<br>
+<br>
+<form #f="ngForm" (submit)="registration(f)">
+  <input type="text" name="uname" placeholder="username" class="margin-100" id="name" [(ngModel)]="student.uname">
+  
+  <input type="password" name="pword" placeholder="password" id="password" [(ngModel)]="student.pword">
+  <button type= "submit">submit</button>
+</form>
