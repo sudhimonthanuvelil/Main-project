@@ -19,6 +19,7 @@ if (isset($_POST["submit"])) {
 	$user = $_POST['username'];//username value from the form
 
 	$pass =$_POST['password'];//password value from the form
+	
 	//echo $username;
 
 	$sql = "select * from login_tbl where user_name='$user' and password ='$pass' and status=1"; //value querried from the table
@@ -27,27 +28,27 @@ if (isset($_POST["submit"])) {
 	$res = mysqli_query($connection, $sql);  //query executing function
 	if ($res){
 		$fetch = mysqli_fetch_assoc($res);
-			if ($fetch['user_type'] == 'business') {
+			if ($fetch['user_type'] == '1') {
 //			$_SESSION["name"]=$fetch['name'];
 				$_SESSION["userid"] = $fetch['userid'];
 				$_SESSION["user_name"] = $user;
 				// setting username as session variable 
-				 header("location:../register.html");	//home page or the dashboard page to be redirected
+				 header("location:../adminhome.html");	//home page or the dashboard page to be redirected
 	
-			// } elseif ($fetch['user_type'] == 'buisiness') {
-			// 	$_SESSION["Username"] = $user;	// setting username as session variable 
-			// 	$_SESSION["userid"] = $fetch['userid'];
-			// 	header("location:../staff.php");
-			// } elseif ($fetch['user_type'] == 'user') {
-			// 	$_SESSION["Username"] = $user;	// setting username as session variable 
-			// 	$_SESSION["userid"] = $fetch['userid'];
-			// 	header("location:../user.php");
-			// }
+			 } elseif ($fetch['user_type'] == '2') {
+				$_SESSION["Username"] = $user;	// setting username as session variable 
+				$_SESSION["userid"] = $fetch['userid'];
+				header("location:../regis/businesshome.php");
+			 } elseif ($fetch['user_type'] == '3') {
+			 	$_SESSION["Username"] = $user;	// setting username as session variable 
+			 	$_SESSION["userid"] = $fetch['userid'];
+			 	header("location:../regis/userhome.php");
+			 }
 	}
+	
+}
+   else{
+        echo '<script> alert("Unauthorized access!!!");</script>';
+    }
 
-}
-   //else{
-    //    echo '<script> alert("Unauthorized access!!!");</script>';
-    //}
-}
 ?>

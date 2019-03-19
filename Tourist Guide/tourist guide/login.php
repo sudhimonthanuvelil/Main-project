@@ -1,11 +1,14 @@
 <?php
-include "../php/connect.php";
+	session_start();
+	if(isset($_SESSION['username'])){
+		echo "<script type=\"text/javascript\"> window.location.assign(\"userhome.php\")</script>";
+	}
 ?>
 
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="en" dir="ltr">
 
-<!-- Mirrored from wptheme.co.in/travel-html/register.html  [XR&CO'2014], Sat, 13 Oct 2018 17:29:18 GMT -->
+<!-- Mirrored from wptheme.co.in/travel-html/login.html  [XR&CO'2014], Sat, 13 Oct 2018 17:29:18 GMT -->
 
 <head>
     <meta charset="utf-8" />
@@ -13,48 +16,38 @@ include "../php/connect.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Home</title>
     <!-- Bootstrap stylesheet -->
-    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900%7CPT+Serif:400,400i,700,700i" rel="stylesheet">
-    <link href="../css/ele-style.css" rel="stylesheet" type="text/css" />
+    <link href="css/ele-style.css" rel="stylesheet" type="text/css" />
     <!-- stylesheet -->
-    <link href="../css/style.css" rel="stylesheet" type="text/css" />
-    <link href="../css/responsive.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/responsive.css" rel="stylesheet" type="text/css" />
     <!-- font-awesome -->
-    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- crousel css -->
-    <link href="../js/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
     <!--bootstrap select-->
-    <link href="../js/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
-    <link href="../js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
-
-    <!-- Adding oh-autoVal css style -->
-    <link rel="stylesheet" type="text/css" href="https://rawgit.com/ozonhub/oh-autoVal/master/css/oh-autoval-style.css">
-    <!-- Adding jQuery script. It must be before other script files -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
-    <!-- Adding oh-autoVal script file -->
-    <script src="https://rawgit.com/ozonhub/oh-autoVal/master/js/oh-autoval-script.js"></script>
+    <link href="js/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
+    <link href="js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <!-- top start here -->
     <div id="top">
         <div class="container">
-            
-        
-                            </div>
-                        </form>
-                    </li>
+            <div id="top-links" class="nav">
+                <ul class="list-inline pull-left">
                     <li>
-                        
-                            </div>
-                        </form>
+                        <a href="#">Welcome to Tourist Guide</a>
                     </li>
+                    
+                    
                 </ul>
 
                 <ul class="list-inline pull-right button">
                     <li><a href="login.html">Login</a>
-                        <a href="register.php">Register</a>
+                        <a href="register.html">Register</a>
                     </li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -71,7 +64,22 @@ include "../php/connect.php";
                 <div class="col-sm-4 col-md-4 col-xs-12">
                     <div class="social-icon">
                         <ul class="list-inline">
-                     
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://in.pinterest.com/" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                            </li>
+                            <li><a href="https://photos.google.com/" target="_blank"><i class="social_picassa"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -81,13 +89,12 @@ include "../php/connect.php";
                         <a href="index-2.html"><img class="img-responsive" src="images/logo.png" alt="logo" title="logo" /></a>
                     </div>
                 </div>
-                <div class="col-sm-4 col-md-4 col-xs-12">
-                    
-                </div>
+               
             </div>
         </div>
     </header>
     <!-- header end here -->
+
 
     <!-- menu start here -->
     <div id="menu">
@@ -103,7 +110,14 @@ include "../php/connect.php";
                             <ul class="nav navbar-nav">
                                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">HOME</a>
                                     <div class="dropdown-menu">
-                                        
+                                        <div class="dropdown-inner">
+                                            <ul class="list-unstyled">
+                                                <li><a href="index-2.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Homepage 1</a></li>
+                                                <li><a href="header2.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Homepage 2</a></li>
+                                                <li><a href="header3.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Homepage 3</a></li>
+                                                <li><a href="header4.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Homepage 4</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </li>
                                 <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">TOUR</a>
@@ -164,10 +178,10 @@ include "../php/connect.php";
     <!-- breadcrumb start here -->
     <div class="bread-crumb">
         <div class="container">
-            <h2>User Register</h2>
+            <h2>Login</h2>
             <ul class="list-inline">
                 <li><a href="index-2.html">home</a></li>
-                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
             </ul>
         </div>
     </div>
@@ -183,82 +197,41 @@ include "../php/connect.php";
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="loginto">
-                            <h2>Register Your account</h2>
+                            <h2>Login to Your account</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat.</p>
-                            <div class="donot">Already have a account -
-                                <a href="login.html">Login Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            <div class="donot">Don't have account -
+                                <a href="register.php">register Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="loginnow">
                             <div class="places">
-                                <h1>Register now</h1>
+                                <h1>Login now</h1>
                                 <p>please login to your account</p>
-                                <hr> 
+                                <hr>
                             </div>
-                            <form method="POST" action ="../php/reg.php" enctype="multipart/form-data" class="oh-autoval-form" onSubmit="return validate()">
+                            <form method="post" action ="php/login.php" enctype="multipart/form-data">
                                 <div class="form-group">
-                                    <i class="fa fa-user"></i><input type="text" name="firstname" placeholder="FIRSTNAME" id="firstname" av-mess age="Invalid Name" class="form-control oh-autoval av-name" />
-                                </div>
-                                <div class="form-group">
-                                    <i class="fa fa-user"></i><input type="text" name="lastname"  placeholder="LASTNAME" id="lastname" av-mess age="Invalid Name" class="form-control oh-autoval av-name"/>
+                                    <i class="fa fa-user"></i><input type="text" name="username"  placeholder="username" id="input-email" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <i class="fa fa-file-text"></i><input type="text" name="Address"  placeholder="ADDRESS" id="address" av-mess age="Feild is Mandatory" class="form-control oh-autoval av-required"/>
+                                    <i class="fa fa-key"></i><input type="password" name="password"  placeholder="password" id="input-password" class="form-control" />
                                 </div>
-                                <div class="form-group">
-                                    <i class="fa fa-envelope"></i><input type="email" name="Email"  placeholder="EMAIL" id="email" av-mess age="Invalid Email" class="form-control oh-autoval av-email"/>
+                                <div class="links">
+                                    <input type="radio" class="radio-inline" />Remember me
+                                    <a href="Forgot Password?" class="pull-right">Forgot Password?</a>
                                 </div>
-                                <!-- <div class="form-group"> 
-                                    <label>Profile picture</label>                 
-                                   <input type="file" id="photo"  class="form-control" name="Photo"accept=".jpg,.jpeg,.png" required>
-                                        <label for="form3"></label>
-                                      </div>
-                                      </div> -->
-                <div class="form-group">
-                    <label for="photo">Photo:</label>
-                    <input type="file" name="fileupload" accept="image/*" size="70" id="fileupload"/>
-                </div>
-                                 <div class="form-group">
-                                    <Select name="District" id="District" class="form-control" />
-                                    <i class="fa fa-envelope"></i><option value="-1">SELECT DISTRICT</option>
-
-                                        <?php                                                                                         //PHP code for district select
-                                        $q=mysqli_query($connection,"SELECT D_id,district_name from district where status=1");
-                                        while ($row = mysqli_fetch_array($q)){
-                                            echo '<option value=' .$row['D_id'] . '>' .$row['district_name']. '</option>';
-                                        }
-                                        ?>
-
-                                    </select>
+                                <input type="submit" name="submit" id="submit" value="Login now" class="btn btn-primary btn-block" />
+                                <div class="or">
+                                    <span>or</span>
+                                    <hr/>
                                 </div>
-                                <div class="form-group">
-                                    <i class="fa fa-envelope"></i><input type="text" name="place"  placeholder="Place" id="place" av-mess age="Feild is Mandatory" class="form-control oh-autoval av-required"/>
-                                </div>
-                                <div class="form-group">
-                                    <i class="fa fa-volume-control-phone"></i><input type="text" name="mobile"  placeholder="Mobile" id="mobile"  av-message="Invalid phone" class="form-control oh-autoval av-phone" />
-                                </div>
-                              
-                                
-                        
-                               <div class="form-group">
-                                    <i class="fa fa-key"></i><i class="fa fa-eye eye" aria-hidden="true"></i><input type="password" name="password" value="" placeholder="password" id="password" av-message="invalid password" class="form-control oh-autoval av-password" />
-                                </div>
-                                <div class="form-group">
-                                    <i class="fa fa-key"></i><i class="fa fa-eye eye" aria-hidden="true"></i><input type="password" name="confirm" value="" placeholder="confirm password" id="confirm" av-message="invalid password" class="form-control oh-autoval av-password"  />
-                                </div>
-                                
-                                <input type="submit" value="Register now" class="btn btn-primary btn-block" />
-                                
-                                <script>
-        function validate(){
-
-    if(!document.getElementById("password").value!=document.getElementById("confirm").value)alert("Passwords do no match");
-    return document.getElementById("password").value==document.getElementById("confirm").value;
-   return false;
-    }
-    </script>
+                                <ul class="list-unstyled">
+                                    <li><a href="https://www.facebook.com/" target="_blank" class="fb"><i class="fa fa-facebook"></i> Login Via Facebook</a></li>
+                                    <li><a href="https://twitter.com/" target="_blank" class="tw"><i class="fa fa-twitter"></i> Login Via Twitter</a></li>
+                                    <li><a href="https://plus.google.com/" target="_blank" class="gp"><i class="fa fa-google-plus"></i> Login Via Google+</a></li>
+                                </ul>
                             </form>
                         </div>
                     </div>
@@ -268,19 +241,31 @@ include "../php/connect.php";
     </div>
     <!-- main container end here -->
 
-    <!-- news start here -->
-   
-
     <!-- footer start here -->
     <footer>
-        
+        <
+                    
             <div class="row">
                 <div class="col-sm-12">
                     <div class="powered">
                         <div class="col-sm-6 padd0">
-                            <p>© Copyright 2019. <span>Tourist Guide </span></p>
+                            <p>© Copyright 2019. <span>Tourist Guide </span> by Multimedia</p>
                         </div>
-                       
+                        <div class="col-sm-6 padd0 text-right">
+                            <div class="social-icon">
+                                <ul class="list-inline">
+                                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                    <li><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a href="https://in.pinterest.com/" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                    <li><a href="https://photos.google.com/" target="_blank"><i class="social_picassa"></i></a></li>
+                                    <li><a href="https://www.youtube.com/?gl=IN" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -302,6 +287,6 @@ include "../php/connect.php";
     <script src="js/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
 </body>
 
-<!-- Mirrored from wptheme.co.in/travel-html/register.html  [XR&CO'2014], Sat, 13 Oct 2018 17:29:18 GMT -->
+<!-- Mirrored from wptheme.co.in/travel-html/login.html  [XR&CO'2014], Sat, 13 Oct 2018 17:29:18 GMT -->
 
 </html>

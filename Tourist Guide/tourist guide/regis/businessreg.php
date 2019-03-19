@@ -16,7 +16,7 @@ include "../php/connect.php";
     <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900%7CPT+Serif:400,400i,700,700i" rel="stylesheet">
-    <link href="../css/ele-style.css" rel="stylesheet" type="text/css" />
+    <link href="css/ele-style.css" rel="stylesheet" type="text/css" />
     <!-- stylesheet -->
     <link href="../css/style.css" rel="stylesheet" type="text/css" />
     <link href="../css/responsive.css" rel="stylesheet" type="text/css" />
@@ -54,7 +54,7 @@ include "../php/connect.php";
 
                 <ul class="list-inline pull-right button">
                     <li><a href="login.html">Login</a>
-                        <a href="register.php">Register</a>
+                        <a href="register.html">Register</a>
                     </li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -78,7 +78,7 @@ include "../php/connect.php";
 
                 <div class="col-sm-4 col-md-4 col-xs-12">
                     <div id="logo">
-                        <a href="index-2.html"><img class="img-responsive" src="images/logo.png" alt="logo" title="logo" /></a>
+                        <a href="../index-2.html"><img class="img-responsive" src="images/logo.png" alt="logo" title="logo" /></a>
                     </div>
                 </div>
                 <div class="col-sm-4 col-md-4 col-xs-12">
@@ -164,7 +164,7 @@ include "../php/connect.php";
     <!-- breadcrumb start here -->
     <div class="bread-crumb">
         <div class="container">
-            <h2>User Register</h2>
+            <h2>Business Register</h2>
             <ul class="list-inline">
                 <li><a href="index-2.html">home</a></li>
                 <li><a href="register.html">Register</a></li>
@@ -197,29 +197,26 @@ include "../php/connect.php";
                                 <p>please login to your account</p>
                                 <hr> 
                             </div>
-                            <form method="POST" action ="../php/reg.php" enctype="multipart/form-data" class="oh-autoval-form" onSubmit="return validate()">
+                            <form method="POST" action ="../php/busi.php" enctype="multipart/form-data" onSubmit="return validate()">
                                 <div class="form-group">
-                                    <i class="fa fa-user"></i><input type="text" name="firstname" placeholder="FIRSTNAME" id="firstname" av-mess age="Invalid Name" class="form-control oh-autoval av-name" />
+                                    <i class="fa fa-user"></i><input type="text" name="orgname"  placeholder="ORGANIZATION NAME" id="orgname" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <i class="fa fa-user"></i><input type="text" name="lastname"  placeholder="LASTNAME" id="lastname" av-mess age="Invalid Name" class="form-control oh-autoval av-name"/>
+                                    <i class="fa fa-user"></i><input type="text" name="orgtype"  placeholder="ORGANIZATION TYPE" id="orgtype" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <i class="fa fa-file-text"></i><input type="text" name="Address"  placeholder="ADDRESS" id="address" av-mess age="Feild is Mandatory" class="form-control oh-autoval av-required"/>
+                                    <i class="fa fa-file-text"></i><input type="text" name="orgdiscription"  placeholder="DISCRIPTION" id="orgdiscription" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <i class="fa fa-envelope"></i><input type="email" name="Email"  placeholder="EMAIL" id="email" av-mess age="Invalid Email" class="form-control oh-autoval av-email"/>
+                                    <i class="fa fa-file-text"></i><input type="text" name="licenseno"  placeholder="LICENCE NUMBER" id="licenseno" class="form-control" />
                                 </div>
-                                <!-- <div class="form-group"> 
-                                    <label>Profile picture</label>                 
-                                   <input type="file" id="photo"  class="form-control" name="Photo"accept=".jpg,.jpeg,.png" required>
-                                        <label for="form3"></label>
-                                      </div>
-                                      </div> -->
-                <div class="form-group">
-                    <label for="photo">Photo:</label>
-                    <input type="file" name="fileupload" accept="image/*" size="70" id="fileupload"/>
-                </div>
+                                
+                                <div class="form-group"> 
+                                
+                                <input type="file" name="fileupload" class="form-control" accept="image/*" size="70" id="fileupload"/>              
+                                   <!-- <input type="file" id="fileupload"  class="form-control" name="fileupload" accept=".jpg,.jpeg,.png" required > -->
+                                </div>
+                                      
                                  <div class="form-group">
                                     <Select name="District" id="District" class="form-control" />
                                     <i class="fa fa-envelope"></i><option value="-1">SELECT DISTRICT</option>
@@ -233,24 +230,29 @@ include "../php/connect.php";
 
                                     </select>
                                 </div>
+                                
                                 <div class="form-group">
-                                    <i class="fa fa-envelope"></i><input type="text" name="place"  placeholder="Place" id="place" av-mess age="Feild is Mandatory" class="form-control oh-autoval av-required"/>
+                                    <i class="fa fa-envelope"></i><input type="text" name="place"  placeholder="PLACE" id="place" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <i class="fa fa-volume-control-phone"></i><input type="text" name="mobile"  placeholder="Mobile" id="mobile"  av-message="Invalid phone" class="form-control oh-autoval av-phone" />
+                                    <i class="fa fa-volume-control-phone"></i><input type="number" name="contact"  placeholder="CONTACT" id="contact" class="form-control" />
+                                    <script>                                                                                                         //validation for number
+                                   document.querySelector("input").addEventListener("keyup", function () {
+                                    console.log(this.value);
+                                    });
+                                </script>
                                 </div>
-                              
+                                <div class="form-group">
+                                    <i class="fa fa-envelope"></i><input type="email" name="Email"  placeholder="EMAIL" id="email" class="form-control" />
+                                </div>
                                 
                         
                                <div class="form-group">
-                                    <i class="fa fa-key"></i><i class="fa fa-eye eye" aria-hidden="true"></i><input type="password" name="password" value="" placeholder="password" id="password" av-message="invalid password" class="form-control oh-autoval av-password" />
+                                    <i class="fa fa-key"></i><i class="fa fa-eye eye" aria-hidden="true"></i><input type="password" name="password" value="" placeholder="password" id="password" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <i class="fa fa-key"></i><i class="fa fa-eye eye" aria-hidden="true"></i><input type="password" name="confirm" value="" placeholder="confirm password" id="confirm" av-message="invalid password" class="form-control oh-autoval av-password"  />
+                                    <i class="fa fa-key"></i><i class="fa fa-eye eye" aria-hidden="true"></i><input type="password" name="confirm" value="" placeholder="confirm password" id="confirm" class="form-control" />
                                 </div>
-                                
-                                <input type="submit" value="Register now" class="btn btn-primary btn-block" />
-                                
                                 <script>
         function validate(){
 
@@ -259,6 +261,10 @@ include "../php/connect.php";
    return false;
     }
     </script>
+                                
+                                <input type="submit" value="Register now" class="btn btn-primary btn-block" />
+                                
+                                 
                             </form>
                         </div>
                     </div>

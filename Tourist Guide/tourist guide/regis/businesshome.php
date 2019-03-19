@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../php/connect.php');
+include('../php/connect.php')
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -59,7 +59,7 @@ include('../php/connect.php');
             <div class="row">
                 <div class="col-sm-3 col-md-3 col-xs-12">
                     <div id="logo">
-                        <a href="index-2.html"><img class="img-responsive" src="../images/logo2.png" alt="logo" title="logo" /></a>
+                        <a href="../index.html"><img class="img-responsive" src="images/logo2.png" alt="logo" title="logo" /></a>
                     </div>
                 </div>
 
@@ -104,12 +104,14 @@ include('../php/connect.php');
                                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">HOME</a>
                                    
                                 </li>
-                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">PLACES</a>
+                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">ORGANIZATION</a>
                                     <div class="dropdown-menu">
                                         <div class="dropdown-inner">
                                             <ul class="list-unstyled">
-                                                <li><a href="../tour-grid-view.html"><i class="fa fa-angle-right" aria-hidden="true"></i>View Place</a></li>
-                                                <li><a href="../tour-detail-view.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Add Place</a></li>
+                                                <li><a href="tour-grid-view.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Add organization</a></li>
+                                                <li><a href="tour-detail-view.html"><i class="fa fa-angle-right" aria-hidden="true"></i>view organization</a></li>
+                                                <li><a href="tour-detail-view.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Update organization</a></li>
+                                                <li><a href="tour-detail-view.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Delete organization</a></li>
                                                 
                                             </ul>
                                         </div>
@@ -121,7 +123,7 @@ include('../php/connect.php');
                                         <div class="dropdown-inner">
                                             <ul class="list-unstyled">
                                                 <li><a href="gallery.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Gallery</a></li>
-                                                <li><a href="error-404.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Error-404</a></li>
+
                                                 
                                             </ul>
                                         </div>
@@ -130,8 +132,6 @@ include('../php/connect.php');
                                 
                                 <li><a href="about.html">ABOUT</a></li>
                                 <li><a href="contact.html">CONTACT</a></li>
-
-                               
                                 <?php 
 $tid=$_SESSION['userid'];
 $sql="SELECT * FROM users_registration_tbl WHERE userid=$tid";
@@ -145,8 +145,8 @@ $row=mysqli_fetch_array($result);
     <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
 	<img src="<?php echo $row['profile_pic']?>" class="avatar" />
-                                    <!-- <img src="images\b2.png" alt="Avatar" class="avatar"> -->
-                                </a>
+
+                                <!----<li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="images\b2.png" alt="Avatar" class="avatar"></a>-->
                                 <div class="dropdown-menu">
                                 <div class="dropdown-inner">
                                     <ul class="list-unstyled">
@@ -192,55 +192,7 @@ $row=mysqli_fetch_array($result);
             </div>
         </div>
 
-        <!-- slide-detail start here -->
-        <div class="slide-detail">
-            <div class="container">
-                <div class="matter">
-                    <p><span>Go Travel</span> is here to make<br> your <span>destination dreams</span> reachable</p>
-                </div>
-                <form class="form-horizontal" method="post">
-                    <div class="form-group">
-                        <div class="col-sm-2 wid">
-                            <h2>Where</h2>
-                            <label>Destination</label>
-                            <input name="s" class="form-control" value="" placeholder="Enter a destination or tour type.." type="text">
-                        </div>
-
-                        <div class="col-sm-10 wid1">
-                            <h2>When</h2>
-                            <div class="col-sm-2 paddleft wid date">
-                                <label>From</label>
-                                <input name="s" class="form-control" value="" placeholder="dd/mm/yy" type="text">
-                                <button type="button" class="calender"><i class="fa fa-calendar-o" aria-hidden="true"></i></button>
-                            </div>
-                            <div class="col-sm-2 wid date padd-left">
-                                <label>To</label>
-                                <input name="s" class="form-control" value="" placeholder="dd/mm/yy" type="text">
-                                <button type="button" class="calender"><i class="fa fa-calendar-o" aria-hidden="true"></i></button>
-                            </div>
-                            <div class="col-sm-2 wid padd-left">
-                                <label>Trip Type</label>
-                                <select class="selectpicker form-control" name="location">
-								<option value="1">Trip Type</option>
-								<option value="0">Location 1</option>
-								<option value="0">Location 2</option>
-								<option value="0">Location 3</option>
-							</select>
-                            </div>
-                            <div class="col-sm-3 wid2 padd-left">
-                                <label>Max Budget</label>
-                                <input name="s" class="form-control" value="" placeholder="Max budget ($)" type="text">
-                            </div>
-                            <div class="col-sm-3 wid2 padd-left">
-                                <button class="btn-primary" type="button">Search Tours</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <!-- slide-detail end here -->
-    </div>
+       
     <!-- slider end here -->
 
     <!-- main container start here -->
@@ -302,7 +254,7 @@ $row=mysqli_fetch_array($result);
                             <p>© Copyright 2019. <span>Tourist Guide</span> by Multimedia</p>
                         </div>
                         <div class="col-sm-6 padd0">
-                            <img src="../images/pay-icon.png" alt="pay" title="pay" class="img-responsive pull-right" />
+                            <img src="images/pay-icon.png" alt="pay" title="pay" class="img-responsive pull-right" />
                         </div>
                     </div>
                 </div>
