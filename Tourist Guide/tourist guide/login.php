@@ -220,7 +220,7 @@
                                 </div>
                                 <div class="links">
                                     <input type="radio" class="radio-inline" />Remember me
-                                    <a href="Forgot Password?" class="pull-right">Forgot Password?</a>
+                                    <a href="mails/forgotpassword.php" class="pull-right">Forgot Password?</a>
                                 </div>
                                 <input type="submit" name="submit" id="submit" value="Login now" class="btn btn-primary btn-block" />
                                 <div class="or">

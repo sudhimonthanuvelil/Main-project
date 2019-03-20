@@ -18,7 +18,7 @@ if (isset($_POST["submit"])) {
 
 	$user = $_POST['username'];//username value from the form
 
-	$pass =$_POST['password'];//password value from the form
+	$pass =md5($_POST['password']);//password value from the form
 	
 	//echo $username;
 
