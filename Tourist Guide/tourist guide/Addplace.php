@@ -1,5 +1,5 @@
 <?php
-include "../php/connect.php";
+include "php/connect.php";
 ?>
 
 <!DOCTYPE html>
@@ -13,27 +13,79 @@ include "../php/connect.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Home</title>
     <!-- Bootstrap stylesheet -->
-    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900%7CPT+Serif:400,400i,700,700i" rel="stylesheet">
     <link href="css/ele-style.css" rel="stylesheet" type="text/css" />
     <!-- stylesheet -->
-    <link href="../css/style.css" rel="stylesheet" type="text/css" />
-    <link href="../css/responsive.css" rel="stylesheet" type="text/css" />
-    <!-- font-awesome -->
-    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <!-- crousel css -->
-    <link href="../js/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
-    <!--bootstrap select-->
-    <link href="../js/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
-    <link href="../js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <style>
+    .leftside{
+	background-image: url("../images/bg-image.jpg");
+	height: 990px;
+	background-repeat: no-repeat;
+	display:block;
+	width:100%;
+	left:0;
+	position:absolute;  
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
 
-    <!-- Adding oh-autoVal css style -->
-    <link rel="stylesheet" type="text/css" href="../js/jsval/oh-autoval-style.css">
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+
+.button4 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.button4:hover {background-color: #e7e7e7;}
+
+.button5 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}
+</style>
+    <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+    <!-- font-awesome -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- crousel css -->
+    <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <!--bootstrap select-->
+    <link href="js/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
+    <link href="js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+<!-- 
+    Adding oh-autoVal css style -->
+    <link rel="stylesheet" type="text/css" href="js/jsval/oh-autoval-style.css">
     <!-- Adding jQuery script. It must be before other script files -->
-    <script src="../js/jsval/jquery.min.js"> </script>
+    <script src="js/jsval/jquery.min.js"> </script>
     <!-- Adding oh-autoVal script file -->
-    <script src="../js/jsval/oh-autoval-script.js"></script>
+    <script src="js/jsval/oh-autoval-script.js"></script>
 </head>
 
 <body>
@@ -52,13 +104,13 @@ include "../php/connect.php";
                     </li>
                 </ul>
 
-                <ul class="list-inline pull-right button">
+                <!-- <ul class="list-inline pull-right button">
                     <li><a href="../login.php">Login</a>
-                        <!-- <a href="register.html">Register</a>
+                        <a href="register.html">Register</a>
                     </li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li> -->
-                </ul>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul> -->
             </div>
         </div>
     </div>
@@ -164,7 +216,7 @@ include "../php/connect.php";
     <!-- breadcrumb start here -->
     <div class="bread-crumb">
         <div class="container">
-            <h2>Business Register</h2>
+            <h2>Add Place</h2>
             <!-- <ul class="list-inline">
                 <li><a href="index.html">home</a></li>
                 <li><a href="register.html">Register</a></li>
@@ -180,42 +232,27 @@ include "../php/connect.php";
         </div>
         <div class="container">
             <div id="content" class="col-sm-12">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="loginto">
-                            <h2>Register Your account</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat.</p>
-                            <div class="donot">Already have a account -
-                                <a href="login.html">Login Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="loginnow">
+                <div class="">
+
+                    <div class="">
+                        <div class="loginnow" style="opacity: 0.7;background-color:white;">
                             <div class="places">
-                                <h1>Register now</h1>
-                                <p>please login to your account</p>
                                 <hr> 
                             </div>
-                            <form method="POST" action ="../php/busi.php" enctype="multipart/form-data" class="oh-autoval-form" onSubmit="return validate()">
+                            <form method="post" action ="php/addplace.php" enctype="multipart/form-data" class="oh-autoval-form" onSubmit="return validate()">
                                 <div class="form-group">
-                                    <i class="fa fa-user"></i><input type="text" name="orgname"  placeholder="ORGANIZATION NAME" id="orgname" av-message="Invalid Name" class="form-control oh-autoval av-name" />
+                                    <i class="fa fa-user"></i><input type="text" name="place"  placeholder="PLACE NAME" id="placename" av-message="Invalid Name" class="form-control oh-autoval av-name" />
                                 </div>
                                 <div class="form-group">
-                                    <i class="fa fa-user"></i><input type="text" name="orgtype"  placeholder="ORGANIZATION TYPE" id="orgtype" av-message="Feild is Mandatory" class="form-control oh-autoval av-required" />
-                                </div>
-                                <div class="form-group">
-                                    <i class="fa fa-file-text"></i><input type="text" name="orgdiscription"  placeholder="DISCRIPTION" id="orgdiscription" av-message="Feild is Mandatory" class="form-control oh-autoval av-required" />
-                                </div>
-                                <div class="form-group">
-                                    <i class="fa fa-file-text"></i><input type="text" name="licenseno"  placeholder="LICENCE NUMBER" id="licenseno" av-message="Feild is Mandatory" class="form-control oh-autoval av-required"/>
+                                    <i class="fa fa-user"></i><input type="text" name="dis"  placeholder="DISCRIPTION" id="dis" av-message="Feild is Mandatory" class="form-control oh-autoval av-required" />
                                 </div>
                                 
-                                <div class="form-group"> 
                                 
-                                <input type="file" name="fileupload" class="form-control" accept="image/*" size="70" id="fileupload"/>              
-                                   <!-- <input type="file" id="fileupload"  class="form-control" name="fileupload" accept=".jpg,.jpeg,.png" required > -->
-                                </div>
+                                <!-- <div class="form-group">  -->
+                                
+                                <!-- <input type="file" name="fileupload" class="form-control" accept="image/*" size="70" id="fileupload"/>               -->
+                                   <!-- <input type="file" id="fileupload"  class="form-control" name="fileupload" accept=".jpg,.jpeg,.png" required >
+                                </div> -->
                                       
                                  <div class="form-group">
                                     <Select name="District" id="District" class="form-control" />
@@ -224,16 +261,14 @@ include "../php/connect.php";
                                         <?php                                                                                         //PHP code for district select
                                         $q=mysqli_query($connection,"SELECT D_id,district_name from district where status=1");
                                         while ($row = mysqli_fetch_array($q)){
-                                            echo '<option value=' .$row['D_id'] . '>' .$row['district_name']. '</option>';
+                                           echo '<option value=' .$row['D_id'] . '>' .$row['district_name']. '</option>';
                                         }
                                         ?>
 
                                     </select>
                                 </div>
                                 
-                                <div class="form-group">
-                                    <i class="fa fa-envelope"></i><input type="text" name="place"  placeholder="PLACE" id="place" av-mess age="Feild is Mandatory" class="form-control oh-autoval av-required" />
-                                </div>
+                                
                                 <div class="form-group">
                                     <i class="fa fa-volume-control-phone"></i><input type="number" name="contact"  placeholder="CONTACT" id="contact" class="form-control oh-autoval av-mobile" />
                                     <!-- <script>                                                                                                         //validation for number
@@ -242,28 +277,29 @@ include "../php/connect.php";
                                     }); -->
                                 </script>
                                 </div>
-                                <div class="form-group">
-                                    <i class="fa fa-envelope"></i><input type="email" name="Email"  placeholder="EMAIL" id="email" av-message="Invalid Email" class="form-control oh-autoval av-email" />
-                                </div>
+                                <!-- <div class="form-group">
+                                    <i class="fa fa-envelope"></i><input type="date" max='2019-04-01' name="date"  placeholder="DATE" id="date" av-message="Invalid Email" class="form-control" />
+                                
+                                </div> -->
                                 
                         
-                               <div class="form-group">
+                               <!-- <div class="form-group">
                                     <i class="fa fa-key"></i><i class="fa fa-eye eye" aria-hidden="true"></i><input type="password" name="password" value="" placeholder="PASSWORD" id="password" av-message="invalid password" class="form-control oh-autoval av-password" />
                                 </div>
                                 <div class="form-group">
                                     <i class="fa fa-key"></i><i class="fa fa-eye eye" aria-hidden="true"></i><input type="password" name="confirm" value="" placeholder="CONFIRM PASSWORD" id="confirm" av-message="invalid password" class="form-control oh-autoval av-password" />
-                                </div>
-                                <script>
+                                </div> -->
+                                <!-- <script>
         function validate(){
 
     if(document.getElementById("password").value!=document.getElementById("confirm").value)alert("Passwords do no match");
     return document.getElementById("password").value==document.getElementById("confirm").value;
    return false;
     }
-    </script>
+    </script> --> 
                                 
-                                <input type="submit" value="Register now" class="btn btn-primary btn-block" />
-                                
+                                <input type="submit" value="ADD" name="submit" class="button button5" />
+                                <!-- <input type="submit" value="CANCEL" class="button button5" /> -->
                                  
                             </form>
                         </div>

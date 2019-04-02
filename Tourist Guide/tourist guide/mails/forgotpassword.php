@@ -122,11 +122,11 @@ $mail->addAddress($row["user_name"]);
 <div class="container" style="margin-top: 100px">
 	<div class="row justify-content-center"> 
 	<div class="col-md-6 col-md-offset-3" align="center">
-		<img src="../img/forgotpassword-3.png"><br><br>
+		<!-- <img src="../img/forgotpassword-3.png">--><br><br>
 		<input type="email" class="form-control" id="user_name" name="user_name" placeholder="Your Email id">
 		<br>
                 <input type="submit"   value="ENTER" name="submits"><br>
-                <a href="../login.php">BACK TO HOME PAGE</a>
+                <a href="../index.html">BACK TO HOME PAGE</a>
 		<p id="response"></p>
 
 		</div>

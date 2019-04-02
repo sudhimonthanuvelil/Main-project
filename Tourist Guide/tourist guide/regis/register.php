@@ -28,12 +28,12 @@ include "../php/connect.php";
     <link href="../js/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
     <link href="../js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
 
-    <!-- Adding oh-autoVal css style -->
-    <link rel="stylesheet" type="text/css" href="https://rawgit.com/ozonhub/oh-autoVal/master/css/oh-autoval-style.css">
+    Adding oh-autoVal css style
+    <link rel="stylesheet" type="text/css" href="../js/jsval/oh-autoval-style.css">
     <!-- Adding jQuery script. It must be before other script files -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+    <script src="../js/jsval/jquery.min.js"> </script>
     <!-- Adding oh-autoVal script file -->
-    <script src="https://rawgit.com/ozonhub/oh-autoVal/master/js/oh-autoval-script.js"></script>
+    <script src="../js/jsval/oh-autoval-script.js"></script>
 </head>
 
 <body>
@@ -53,11 +53,11 @@ include "../php/connect.php";
                 </ul>
 
                 <ul class="list-inline pull-right button">
-                    <li><a href="login.html">Login</a>
-                        <a href="register.php">Register</a>
+                    <li><a href="../login.php">Login</a>
+                        <!-- <a href="register.php">Register</a> -->
                     </li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <!-- <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li> -->
                 </ul>
             </div>
         </div>
@@ -101,12 +101,12 @@ include "../php/connect.php";
                         </div>
                         <div class="collapse navbar-collapse navbar-ex1-collapse padd0">
                             <ul class="nav navbar-nav">
-                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">HOME</a>
+                                <li class="dropdown"><a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">HOME</a>
                                     <div class="dropdown-menu">
                                         
                                     </div>
                                 </li>
-                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">TOUR</a>
+                                <!-- <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">TOUR</a>
                                     <div class="dropdown-menu">
                                         <div class="dropdown-inner">
                                             <ul class="list-unstyled">
@@ -149,9 +149,9 @@ include "../php/connect.php";
                                             </ul>
                                         </div>
                                     </div>
-                                </li>
-                                <li><a href="about.html">ABOUT</a></li>
-                                <li><a href="contact.html">CONTACT</a></li>
+                                </li> -->
+                                <li><a href="">ABOUT</a></li>
+                                <li><a href="">CONTACT</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -165,10 +165,10 @@ include "../php/connect.php";
     <div class="bread-crumb">
         <div class="container">
             <h2>User Register</h2>
-            <ul class="list-inline">
+            <!-- <ul class="list-inline">
                 <li><a href="index-2.html">home</a></li>
                 <li><a href="register.html">Register</a></li>
-            </ul>
+            </ul> -->
         </div>
     </div>
     <!-- breadcrumb end here -->
@@ -199,16 +199,13 @@ include "../php/connect.php";
                             </div>
                             <form method="POST" action ="../php/reg.php" enctype="multipart/form-data" class="oh-autoval-form" onSubmit="return validate()">
                                 <div class="form-group">
-                                    <i class="fa fa-user"></i><input type="text" name="firstname" placeholder="FIRSTNAME" id="firstname" av-mess age="Invalid Name" class="form-control oh-autoval av-name" />
+                                    <i class="fa fa-user"></i><input type="text" name="firstname" placeholder="FIRSTNAME" id="firstname" av-message="Invalid Name" class="form-control oh-autoval av-name" />
                                 </div>
                                 <div class="form-group">
-                                    <i class="fa fa-user"></i><input type="text" name="lastname"  placeholder="LASTNAME" id="lastname" av-mess age="Invalid Name" class="form-control oh-autoval av-name"/>
+                                    <i class="fa fa-user"></i><input type="text" name="lastname"  placeholder="LASTNAME" id="lastname" av-message="Invalid Name" class="form-control oh-autoval av-name"/>
                                 </div>
                                 <div class="form-group">
-                                    <i class="fa fa-file-text"></i><input type="text" name="Address"  placeholder="ADDRESS" id="address" av-mess age="Feild is Mandatory" class="form-control oh-autoval av-required"/>
-                                </div>
-                                <div class="form-group">
-                                    <i class="fa fa-envelope"></i><input type="email" name="Email"  placeholder="EMAIL" id="email" av-mess age="Invalid Email" class="form-control oh-autoval av-email"/>
+                                    <i class="fa fa-envelope"></i><input type="email" name="Email"  placeholder="EMAIL" id="email" av-message="Invalid Email" class="form-control oh-autoval av-email"/>
                                 </div>
                                 <!-- <div class="form-group"> 
                                     <label>Profile picture</label>                 
@@ -234,20 +231,18 @@ include "../php/connect.php";
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <i class="fa fa-envelope"></i><input type="text" name="place"  placeholder="Place" id="place" av-mess age="Feild is Mandatory" class="form-control oh-autoval av-required"/>
+                                    <i class="fa fa-envelope"></i><input type="text" name="place"  placeholder="Place" id="place" av-message="Feild is Mandatory" class="form-control oh-autoval av-required"/>
                                 </div>
                                 <div class="form-group">
-                                    <i class="fa fa-volume-control-phone"></i><input type="text" name="mobile"  placeholder="Mobile" id="mobile"  av-message="Invalid phone" class="form-control oh-autoval av-phone" />
+                                    
+                                    <i class="fa fa-volume-control-phone"></i><input type="number" name="mobile"  placeholder="Mobile" id="mobile"  av-message="Invalid phone" class="form-control oh-autoval av-phone" />
                                 </div>
 
-                              
-                                
-                        
-                               <div class="form-group">
-                                    <i class="fa fa-key"></i><i class="fa fa-eye eye" aria-hidden="true"></i><input type="password" name="password" value="" placeholder="password" id="password" av-message="invalid password" class="form-control oh-autoval av-password" />
+                            <div class="form-group">
+                                    <i class="fa fa-key"></i><i class="fa fa-eye eye" aria-hidden="true"></i><input type="password" name="password" value="" placeholder="PASSWORD" id="password" av-message="contains one uppoer case letter lower case letter special charecter and number" class="form-control oh-autoval av-password" />
                                 </div>
                                 <div class="form-group">
-                                    <i class="fa fa-key"></i><i class="fa fa-eye eye" aria-hidden="true"></i><input type="password" name="confirm" value="" placeholder="confirm password" id="confirm" av-message="invalid password" class="form-control oh-autoval av-password"  />
+                                    <i class="fa fa-key"></i><i class="fa fa-eye eye" aria-hidden="true"></i><input type="password" name="confirm" value="" placeholder="CONFIRM PASSWORD" id="confirm" av-message="contains one uppoer case letter lower case letter special charecter and number" class="form-control oh-autoval av-password"  />
                                 </div>
                                 
                                 <input type="submit" value="Register now" class="btn btn-primary btn-block" />
@@ -255,7 +250,7 @@ include "../php/connect.php";
                                 <script>
         function validate(){
 
-    if(!document.getElementById("password").value!=document.getElementById("confirm").value)alert("Passwords do no match");
+    if(document.getElementById("password").value!=document.getElementById("confirm").value)alert("Passwords do no match");
     return document.getElementById("password").value==document.getElementById("confirm").value;
    return false;
     }

@@ -7,32 +7,35 @@
 	$rec=mysqli_query($connection,$sql); 
 	$recs=mysqli_fetch_array($rec);
 	$tid1=$recs['usertypeid'];
-	$query="insert into users_registration_tbl (`First_name`, `Last_name`, `Address`, `Email`, `profile_pic`,`Place`, `Mobile`) values(
-									\"".$_POST['firstname']."\",
-									\"".$_POST['lastname']."\",
-									\"".$_POST['Address']."\",
-									\"".$_POST['Email']."\",
-									'$path',
-									\"".$_POST['place']."\",
-									\"".$_POST['mobile']."\"
-				)";
+	$query="insert into login_tbl (`user_name`, `password`, `user_type`, `status`) values(
+		\"".$_POST['Email']."\",
+		\"".md5($_POST['password'])."\",
+		'$tid1',
+		1
+		
+)";
+				//echo $query;
 				
 		$query_exe=mysqli_query($connection,$query);
 		$email=$_POST['Email'];
-		$qry="select userid from users_registration_tbl where Email='$email'";
+		$qry="select * from login_tbl where user_name='$email'";
+		//echo $qry;
 		$ex_qry=mysqli_query($connection,$qry);
 		$fe_qry=mysqli_fetch_array($ex_qry);
 		$uid=$fe_qry['userid'];
-		$querys="insert into login_tbl (`userid`,`user_name`, `password`, `user_type`, `status`) values(
-			'$uid',
-			\"".$_POST['Email']."\",
-			\"".$_POST['password']."\",
-			'$tid1',
-			1
-			
+
+$querys="insert into users_registration_tbl (`userid`,`First_name`, `Last_name`, `Email`,`D_id`, `profile_pic`,`Place`, `Mobile`) values(
+	'$uid',
+	\"".$_POST['firstname']."\",
+	\"".$_POST['lastname']."\",
+	\"".$_POST['Email']."\",
+	\"".$_POST['District']."\",
+	'$path',
+	\"".$_POST['place']."\",
+	\"".$_POST['mobile']."\"
 )";
 
 		
 $query_exes=mysqli_query($connection,$querys);
-		echo "Sign Up Successful.<br>Login to continue.";
+ header("location:../login.php");
 ?>

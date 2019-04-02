@@ -1,7 +1,8 @@
 <?php
-	session_start();
+    session_start();
 	if(isset($_SESSION['username'])){
-		echo "<script type=\"text/javascript\"> window.location.assign(\"userhome.php\")</script>";
+        echo "<script type=\"text/javascript\"> window.location.assign(\"userhome.php\")</script>";
+        
 	}
 ?>
 
@@ -45,13 +46,13 @@
                     
                 </ul>
 
-                <ul class="list-inline pull-right button">
+                <!-- <ul class="list-inline pull-right button">
                     <li><a href="login.html">Login</a>
                         <a href="register.html">Register</a>
                     </li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </div>
@@ -108,64 +109,22 @@
                         </div>
                         <div class="collapse navbar-collapse navbar-ex1-collapse padd0">
                             <ul class="nav navbar-nav">
-                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">HOME</a>
+                                <li class="dropdown"><a href="index.html">HOME</a>
+                                </li>
+                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">REGISTER</a>
                                     <div class="dropdown-menu">
                                         <div class="dropdown-inner">
                                             <ul class="list-unstyled">
-                                                <li><a href="index-2.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Homepage 1</a></li>
-                                                <li><a href="header2.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Homepage 2</a></li>
-                                                <li><a href="header3.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Homepage 3</a></li>
-                                                <li><a href="header4.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Homepage 4</a></li>
+                                                <li><a href="regis/register.php"><i class="fa fa-angle-right" aria-hidden="true"></i>User</a></li>
+                                                <li><a href="regis/businessreg.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Business Organization</a></li>
+                                            
                                             </ul>
                                         </div>
                                     </div>
                                 </li>
-                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">TOUR</a>
-                                    <div class="dropdown-menu">
-                                        <div class="dropdown-inner">
-                                            <ul class="list-unstyled">
-                                                <li><a href="tour-grid-view.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Tour</a></li>
-                                                <li><a href="tour-detail-view.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Tour Detail</a></li>
-                                                <li><a href="tour-booking-form.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Tour Booking Form</a></li>
-                                                <li><a href="thank-you.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Thank You</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a href="guides.html">GUIDES</a></li>
-                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">BLOG</a>
-                                    <div class="dropdown-menu">
-                                        <div class="dropdown-inner">
-                                            <ul class="list-unstyled">
-                                                <li><a href="blog.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Blog</a></li>
-                                                <li><a href="blog-detail.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Blog Detail</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">PAGES</a>
-                                    <div class="dropdown-menu">
-                                        <div class="dropdown-inner">
-                                            <ul class="list-unstyled">
-                                                <li><a href="gallery.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Gallery</a></li>
-                                                <li><a href="error-404.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Error-404</a></li>
-                                                <li><a href="faq.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Faq</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">USER</a>
-                                    <div class="dropdown-menu">
-                                        <div class="dropdown-inner">
-                                            <ul class="list-unstyled">
-                                                <li><a href="login.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Login</a></li>
-                                                <li><a href="register.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Register</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a href="about.html">ABOUT</a></li>
-                                <li><a href="contact.html">CONTACT</a></li>
+                                
+                                <li><a href="">ABOUT</a></li>
+                                <li><a href="">CONTACT</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -179,10 +138,7 @@
     <div class="bread-crumb">
         <div class="container">
             <h2>Login</h2>
-            <ul class="list-inline">
-                <li><a href="index-2.html">home</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
+            
         </div>
     </div>
     <!-- breadcrumb end here -->
@@ -213,10 +169,10 @@
                             </div>
                             <form method="post" action ="php/login.php" enctype="multipart/form-data">
                                 <div class="form-group">
-                                    <i class="fa fa-user"></i><input type="text" name="username"  placeholder="username" id="input-email" class="form-control" />
+                                    <i class="fa fa-user"></i><input type="text" name="username"  placeholder="USERNAME" id="input-email" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <i class="fa fa-key"></i><input type="password" name="password"  placeholder="password" id="input-password" class="form-control" />
+                                    <i class="fa fa-key"></i><input type="password" name="password"  placeholder="PASSWORD" id="input-password" class="form-control" />
                                 </div>
                                 <div class="links">
                                     <input type="radio" class="radio-inline" />Remember me

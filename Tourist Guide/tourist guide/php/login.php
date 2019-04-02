@@ -23,17 +23,17 @@ if (isset($_POST["submit"])) {
 	//echo $username;
 
 	$sql = "select * from login_tbl where user_name='$user' and password ='$pass' and status=1"; //value querried from the table
-	echo $sql;
+	// echo $sql;
 	
 	$res = mysqli_query($connection, $sql);  //query executing function
-	if ($res){
+	if (mysqli_num_rows($res)>0){
 		$fetch = mysqli_fetch_assoc($res);
 			if ($fetch['user_type'] == '1') {
 //			$_SESSION["name"]=$fetch['name'];
 				$_SESSION["userid"] = $fetch['userid'];
 				$_SESSION["user_name"] = $user;
 				// setting username as session variable 
-				 header("location:../adminhome.html");	//home page or the dashboard page to be redirected
+				 header("location:../adminhome.php");	//home page or the dashboard page to be redirected
 	
 			 } elseif ($fetch['user_type'] == '2') {
 				$_SESSION["Username"] = $user;	// setting username as session variable 
@@ -45,10 +45,12 @@ if (isset($_POST["submit"])) {
 			 	header("location:../regis/userhome.php");
 			 }
 	}
+	else{
+		// header("location:login.php");
+		   echo "<script>alert('Unauthorized access!!!');window.location='../login.php';</script>";
+		}
 	
 }
-   else{
-        echo '<script> alert("Unauthorized access!!!");</script>';
-    }
+
 
 ?>

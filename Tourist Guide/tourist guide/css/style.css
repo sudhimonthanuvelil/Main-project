@@ -2368,7 +2368,8 @@ li.active .sport, li:hover .sport{
 	font-family: "PT Serif",serif;
 }
 .loginnow{
-	padding:70px 0 0 100px;
+	padding:70px 0 0 0;
+	border-radius: 10px;
 }
 .loginnow p{
 	margin:0 0 20px;
@@ -2396,7 +2397,7 @@ li.active .sport, li:hover .sport{
 }
 .loginnow .form-control, .contacts .form-control{
 	height:36px;
-	border-radius:0px;
+	border-radius:15px;
 	padding-left:30px;
 	color:#ccc;
 	font-size:14px;
@@ -2406,7 +2407,7 @@ li.active .sport, li:hover .sport{
 
 
 	
-}
+
 .loginnow .links a, .loginnow .links{
 	color:#000;
 	font-size:16px;
@@ -2418,7 +2419,7 @@ li.active .sport, li:hover .sport{
 .loginnow .btn-primary, .contacts .btn-primary{
 	background:#fcb714;
 	color:#fff;
-	height:10px;
+	height:40px;
 	border-radius:0px;
 	margin:5px 0 25px;
 	border:none;

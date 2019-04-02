@@ -18,7 +18,7 @@ if (isset($_POST['register'])) {
         $up = ($db->executeNonQuery($sqll));
         if ($up) {
             
-    echo "<script>alert('Password changed succesfully, Pleas login');window.location='../index.php';</script>";
+    echo "<script>alert('Password changed succesfully, Pleas login');window.location='../login.php';</script>";
     
            // <script> alert("Password changed succesfully");</script>
             
@@ -46,7 +46,7 @@ if (isset($_POST['register'])) {
 		
                 <br>
 		<input type="submit"   value="Reset Password" name="register">
-                <a href="../index.php">BACK TO HOME PAGE</a>
+                <a href="../index.html">BACK TO HOME PAGE</a>
 		<p id="response"></p>
 
 		</div>

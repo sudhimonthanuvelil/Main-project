@@ -1,6 +1,11 @@
 <?php
 session_start();
+if(!$_SESSION["userid"])
+{
+    header("location:../login.php");
+}
 include('../php/connect.php')
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -42,12 +47,7 @@ include('../php/connect.php')
                 </ul>
 
                 <ul class="list-inline pull-right button">
-                    <li><a href="login.html">Login</a>
-                        <a href="register.html">Register</a>
-                    </li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+                    </ul>
             </div>
         </div>
     </div>
@@ -101,17 +101,17 @@ include('../php/connect.php')
                         </div>
                         <div class="collapse navbar-collapse navbar-ex1-collapse padd0">
                             <ul class="nav navbar-nav">
-                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">HOME</a>
+                                <li class="dropdown"><a href="../index.html">HOME</a>
                                    
                                 </li>
                                 <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">ORGANIZATION</a>
                                     <div class="dropdown-menu">
                                         <div class="dropdown-inner">
                                             <ul class="list-unstyled">
-                                                <li><a href="tour-grid-view.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Add organization</a></li>
-                                                <li><a href="tour-detail-view.html"><i class="fa fa-angle-right" aria-hidden="true"></i>view organization</a></li>
-                                                <li><a href="tour-detail-view.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Update organization</a></li>
-                                                <li><a href="tour-detail-view.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Delete organization</a></li>
+                                                <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>Add organization</a></li>
+                                                <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>view organization</a></li>
+                                                <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>Update organization</a></li>
+                                                <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>Delete organization</a></li>
                                                 
                                             </ul>
                                         </div>
@@ -122,7 +122,7 @@ include('../php/connect.php')
                                     <div class="dropdown-menu">
                                         <div class="dropdown-inner">
                                             <ul class="list-unstyled">
-                                                <li><a href="gallery.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Gallery</a></li>
+                                                <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>Gallery</a></li>
 
                                                 
                                             </ul>
@@ -130,8 +130,8 @@ include('../php/connect.php')
                                     </div>
                                 </li>
                                 
-                                <li><a href="about.html">ABOUT</a></li>
-                                <li><a href="contact.html">CONTACT</a></li>
+                                <li><a href="">ABOUT</a></li>
+                                <li><a href="">CONTACT</a></li>
                                 <?php 
 $tid=$_SESSION['userid'];
 $sql="SELECT * FROM users_registration_tbl WHERE userid=$tid";
@@ -150,7 +150,7 @@ $row=mysqli_fetch_array($result);
                                 <div class="dropdown-menu">
                                 <div class="dropdown-inner">
                                     <ul class="list-unstyled">
-                                        <li><a href="gallery.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Edit Profile</a></li>
+                                        <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>Edit Profile</a></li>
                                         <li><a href="../php/logout.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Logout</a></li>
                                          </ul>
                                 </div>
