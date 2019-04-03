@@ -248,11 +248,11 @@ include "php/connect.php";
                                 </div>
                                 
                                 
-                                <!-- <div class="form-group">  -->
+                                <div class="form-group"> 
                                 
                                 <!-- <input type="file" name="fileupload" class="form-control" accept="image/*" size="70" id="fileupload"/>               -->
-                                   <!-- <input type="file" id="fileupload"  class="form-control" name="fileupload" accept=".jpg,.jpeg,.png" required >
-                                </div> -->
+                                   <input type="file" id="fileupload"  class="form-control" name="fileupload" accept=".jpg,.jpeg,.png" required >
+                                </div>
                                       
                                  <div class="form-group">
                                     <Select name="District" id="District" class="form-control" />
