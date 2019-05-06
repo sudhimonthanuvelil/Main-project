@@ -1,7 +1,11 @@
+<?php
+include "php/connect.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-<!-- Mirrored from wptheme.co.in/travel-html/login.html  [XR&CO'2014], Sat, 13 Oct 2018 17:29:18 GMT -->
+<!-- Mirrored from wptheme.co.in/travel-html/register.html  [XR&CO'2014], Sat, 13 Oct 2018 17:29:18 GMT -->
 
 <head>
     <meta charset="utf-8" />
@@ -15,6 +19,58 @@
     <link href="css/ele-style.css" rel="stylesheet" type="text/css" />
     <!-- stylesheet -->
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <style>
+    .leftside{
+	background-image: url("../images/bg-image.jpg");
+	height: 990px;
+	background-repeat: no-repeat;
+	display:block;
+	width:100%;
+	left:0;
+	position:absolute;  
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+
+.button4 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.button4:hover {background-color: #e7e7e7;}
+
+.button5 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}
+</style>
     <link href="css/responsive.css" rel="stylesheet" type="text/css" />
     <!-- font-awesome -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -23,28 +79,38 @@
     <!--bootstrap select-->
     <link href="js/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
     <link href="js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+<!-- 
+    Adding oh-autoVal css style -->
+    <link rel="stylesheet" type="text/css" href="js/jsval/oh-autoval-style.css">
+    <!-- Adding jQuery script. It must be before other script files -->
+    <script src="js/jsval/jquery.min.js"> </script>
+    <!-- Adding oh-autoVal script file -->
+    <script src="js/jsval/oh-autoval-script.js"></script>
 </head>
 
 <body>
     <!-- top start here -->
     <div id="top">
         <div class="container">
-            <div id="top-links" class="nav">
-                <ul class="list-inline pull-left">
-                    <li>
-                        <a href="#">Welcome to Tourist Guide</a>
+            
+        
+                            </div>
+                        </form>
                     </li>
-                    
-                    
+                    <li>
+                        
+                            </div>
+                        </form>
+                    </li>
                 </ul>
 
-                <ul class="list-inline pull-right button">
-                    <li><a href="login.html">Login</a>
+                <!-- <ul class="list-inline pull-right button">
+                    <li><a href="../login.php">Login</a>
                         <a href="register.html">Register</a>
                     </li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </div>
@@ -57,37 +123,23 @@
                 <div class="col-sm-4 col-md-4 col-xs-12">
                     <div class="social-icon">
                         <ul class="list-inline">
-                            <li>
-                                <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://in.pinterest.com/" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-                            </li>
-                            <li><a href="https://photos.google.com/" target="_blank"><i class="social_picassa"></i></a></li>
+                     
                         </ul>
                     </div>
                 </div>
 
                 <div class="col-sm-4 col-md-4 col-xs-12">
                     <div id="logo">
-                        <a href="index-2.html"><img class="img-responsive" src="images/logo.png" alt="logo" title="logo" /></a>
+                        <a href=""><img class="img-responsive" src="" alt="logo" title="logo" /></a>
                     </div>
                 </div>
-               
+                <div class="col-sm-4 col-md-4 col-xs-12">
+                    
+                </div>
             </div>
         </div>
     </header>
     <!-- header end here -->
-
 
     <!-- menu start here -->
     <div id="menu">
@@ -99,20 +151,15 @@
                             <span class="menutext visible-xs">Menu</span>
                             <button data-target=".navbar-ex1-collapse" data-toggle="collapse" class="btn btn-navbar navbar-toggle" type="button"><i class="fa fa-bars" aria-hidden="true"></i></button>
                         </div>
+                        
                         <div class="collapse navbar-collapse navbar-ex1-collapse padd0">
                             <ul class="nav navbar-nav">
-                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">HOME</a>
+                                <li><a href="adminhome.php">HOME</a></li>
+                                <!-- <li class="dropdown"><a href="userhome.php" class="dropdown-toggle" data-toggle="dropdown">HOME</a>
                                     <div class="dropdown-menu">
-                                        <div class="dropdown-inner">
-                                            <ul class="list-unstyled">
-                                                <li><a href="index-2.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Homepage 1</a></li>
-                                                <li><a href="header2.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Homepage 2</a></li>
-                                                <li><a href="header3.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Homepage 3</a></li>
-                                                <li><a href="header4.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Homepage 4</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
+                                        
+                                    </div> -->
+                                <!-- </li>
                                 <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">TOUR</a>
                                     <div class="dropdown-menu">
                                         <div class="dropdown-inner">
@@ -156,9 +203,9 @@
                                             </ul>
                                         </div>
                                     </div>
-                                </li>
-                                <li><a href="about.html">ABOUT</a></li>
-                                <li><a href="contact.html">CONTACT</a></li>
+                                </li> -->
+                                <li><a href="">ABOUT</a></li>
+                                <li><a href="">CONTACT</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -171,11 +218,11 @@
     <!-- breadcrumb start here -->
     <div class="bread-crumb">
         <div class="container">
-            <h2>Login</h2>
-            <ul class="list-inline">
-                <li><a href="index-2.html">home</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
+            <h2>Add Place</h2>
+            <!-- <ul class="list-inline">
+                <li><a href="index.html">home</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul> -->
         </div>
     </div>
     <!-- breadcrumb end here -->
@@ -187,44 +234,84 @@
         </div>
         <div class="container">
             <div id="content" class="col-sm-12">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="loginto">
-                            <h2>Login to Your account</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat.</p>
-                            <div class="donot">Don't have account -
-                                <a href="register.php">register Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="loginnow">
+                <div class="">
+
+                    <div class="">
+                        <div class="loginnow" style="opacity: 0.7;background-color:red;">
                             <div class="places">
-                                <h1>Login now</h1>
-                                <p>please login to your account</p>
-                                <hr>
+                                <hr> 
                             </div>
-                            <form method="post" action ="php/login.php" enctype="multipart/form-data">
+                            <form method="post" action ="php/addplace.php" enctype="multipart/form-data" class="oh-autoval-form" onSubmit="return validate()">
                                 <div class="form-group">
-                                    <i class="fa fa-user"></i><input type="text" name="username" value="username" placeholder="username" id="input-email" class="form-control" />
+                                    <i class="fa fa-user"></i><input type="text" name="place"  placeholder="PLACE NAME" id="placename" av-message="Invalid Name" class="form-control oh-autoval av-name" />
                                 </div>
                                 <div class="form-group">
-                                    <i class="fa fa-key"></i><input type="password" name="password" value="" placeholder="password" id="input-password" class="form-control" />
+                                    <i class="fa fa-user"></i><input type="text" name="dis"  placeholder="DISCRIPTION" id="dis" av-message="Feild is Mandatory" class="form-control oh-autoval av-required" />
                                 </div>
-                                <div class="links">
-                                    <input type="radio" class="radio-inline" />Remember me
-                                    <a href="Forgot Password?" class="pull-right">Forgot Password?</a>
+                                
+                                
+                                <div class="form-group"> 
+                                
+                                <!-- <input type="file" name="fileupload" class="form-control" accept="image/*" size="70" id="fileupload"/>               -->
+                                   <input type="file" id="fileupload"  class="form-control" name="fileupload" accept=".jpg,.jpeg,.png" required >
                                 </div>
-                                <input type="submit" name="submit" id="submit" value="Login now" class="btn btn-primary btn-block" />
-                                <div class="or">
-                                    <span>or</span>
-                                    <hr/>
+                                      
+                                 <div class="form-group">
+                                    <Select name="District" id="District" class="form-control" />
+                                    <i class="fa fa-envelope"></i><option value="-1">SELECT DISTRICT</option>
+
+                                        <?php                                                                                         //PHP code for district select
+                                        $q=mysqli_query($connection,"SELECT D_id,district_name from district where status=1");
+                                        while ($row = mysqli_fetch_array($q)){
+                                           echo '<option value=' .$row['D_id'] . '>' .$row['district_name']. '</option>';
+                                        }
+                                        ?>
+
+                                    </select>
                                 </div>
-                                <ul class="list-unstyled">
-                                    <li><a href="https://www.facebook.com/" target="_blank" class="fb"><i class="fa fa-facebook"></i> Login Via Facebook</a></li>
-                                    <li><a href="https://twitter.com/" target="_blank" class="tw"><i class="fa fa-twitter"></i> Login Via Twitter</a></li>
-                                    <li><a href="https://plus.google.com/" target="_blank" class="gp"><i class="fa fa-google-plus"></i> Login Via Google+</a></li>
-                                </ul>
+                                
+                                
+                                <div class="form-group">
+                                    <i class="fa fa-volume-control-phone"></i><input type="number" name="contact"  placeholder="CONTACT" id="contact" class="form-control oh-autoval av-mobile" />
+                                    <!-- <script>                                                                                                         //validation for number
+                                   document.querySelector("text").addEventListener("keyup", function () {
+                                    console.log(this.value);
+                                    }); -->
+                                </script>
+                                </div>
+                                <div class="form-group">
+                                    <i class="fa fa-user"></i><input type="text" name="type"  placeholder="MAJOR ATTRACTION" id="type" av-message="Feild is Mandatory" class="form-control oh-autoval av-required" />
+                                </div>
+                                <div class="form-group">
+                                    <i class="fa fa-user"></i><input type="text" name="n_o_t"  placeholder="AVILABLE TICKETS" id="n_o_t" av-message="Feild is Mandatory" class="form-control oh-autoval av-required" />
+                                </div>
+                                <div class="form-group">
+                                    <i class="fa fa-user"></i><input type="text" name="amount"  placeholder="AMOUNT" id="amonunt" av-message="Feild is Mandatory" class="form-control oh-autoval av-required" />
+                                </div>
+                                <!-- <div class="form-group">
+                                    <i class="fa fa-envelope"></i><input type="date" max='2019-04-01' name="date"  placeholder="DATE" id="date" av-message="Invalid Email" class="form-control" />
+                                
+                                </div> -->
+                                
+                        
+                               <!-- <div class="form-group">
+                                    <i class="fa fa-key"></i><i class="fa fa-eye eye" aria-hidden="true"></i><input type="password" name="password" value="" placeholder="PASSWORD" id="password" av-message="invalid password" class="form-control oh-autoval av-password" />
+                                </div>
+                                <div class="form-group">
+                                    <i class="fa fa-key"></i><i class="fa fa-eye eye" aria-hidden="true"></i><input type="password" name="confirm" value="" placeholder="CONFIRM PASSWORD" id="confirm" av-message="invalid password" class="form-control oh-autoval av-password" />
+                                </div> -->
+                                <!-- <script>
+        function validate(){
+
+    if(document.getElementById("password").value!=document.getElementById("confirm").value)alert("Passwords do no match");
+    return document.getElementById("password").value==document.getElementById("confirm").value;
+   return false;
+    }
+    </script> --> 
+                                
+                                <input type="submit" value="ADD" name="submit" class="button button5" />
+                                <!-- <input type="submit" value="CANCEL" class="button button5" /> -->
+                                 
                             </form>
                         </div>
                     </div>
@@ -234,31 +321,19 @@
     </div>
     <!-- main container end here -->
 
+    <!-- news start here -->
+   
+
     <!-- footer start here -->
     <footer>
-        <
-                    
+        
             <div class="row">
                 <div class="col-sm-12">
                     <div class="powered">
                         <div class="col-sm-6 padd0">
-                            <p>© Copyright 2019. <span>Tourist Guide </span> by Multimedia</p>
+                            <p>© Copyright 2019. <span>Tourist Guide </span></p>
                         </div>
-                        <div class="col-sm-6 padd0 text-right">
-                            <div class="social-icon">
-                                <ul class="list-inline">
-                                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                    <li><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                    <li><a href="https://in.pinterest.com/" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-                                    <li><a href="https://photos.google.com/" target="_blank"><i class="social_picassa"></i></a></li>
-                                    <li><a href="https://www.youtube.com/?gl=IN" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                       
                 </div>
             </div>
         </div>
@@ -280,6 +355,6 @@
     <script src="js/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
 </body>
 
-<!-- Mirrored from wptheme.co.in/travel-html/login.html  [XR&CO'2014], Sat, 13 Oct 2018 17:29:18 GMT -->
+<!-- Mirrored from wptheme.co.in/travel-html/register.html  [XR&CO'2014], Sat, 13 Oct 2018 17:29:18 GMT -->
 
 </html>

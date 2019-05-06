@@ -37,7 +37,7 @@ $sql=  mysqli_query($connection, "select * from addplace_tbl where place_name='$
 
 if(mysqli_num_rows($sql)>0)
 {
-	echo "<script> alert('Place Already exist');window.location='../Addplace.php'</script>";
+	echo "<script> alert('Place Already exist');window.location='../userplaceadd.php'</script>";
 }
 else{
 

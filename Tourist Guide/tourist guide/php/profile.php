@@ -43,7 +43,6 @@ echo "<td>".$orgi['First_name']."</td>";
 echo "<td>".$orgi['Last_name']."</td>";
 echo "<td>".$orgi['Place']."</td>";
 echo "<td>".$orgi['district_name']."</td>";
-//echo "<td>".$orgi['estat']."</td>";
 echo "<td>".$orgi['Email']."</td>";
 echo "<td>".$orgi['Mobile']."</td>";
 

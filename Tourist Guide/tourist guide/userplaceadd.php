@@ -98,7 +98,23 @@ margin-left: 33.333333%;
 
     <!-- header start here-->
     <header>
-        
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-xs-12">
+                    <div id="logo">
+                        <a href="index-2.html"><img class="img-responsive" src="images/logo2.png" alt="logo" title="logo" /></a>
+                    </div>
+                </div>
+
+                
+                <div class="col-sm-2 col-md-2 col-xs-12 text-center">
+                    <div class="phone">
+                        
+						
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     <!-- header end here -->
 
@@ -114,7 +130,7 @@ margin-left: 33.333333%;
                         </div>
                         <div class="collapse navbar-collapse navbar-ex1-collapse padd0">
                             <ul class="nav navbar-nav">
-                                <li class="dropdown"><a href="adminhome.php">HOME</a>
+                                <li class="dropdown"><a href="regis/userhome.php">HOME</a>
                                    
                                 
                         
@@ -126,7 +142,7 @@ margin-left: 33.333333%;
         </div>
     </div>
     <div>
-    <form method="post" action ="php/addplace.php" enctype="multipart/form-data" class="oh-autoval-form" onSubmit="return validate()">
+    <form method="post" action ="php/addplaceu.php" enctype="multipart/form-data" class="oh-autoval-form" onSubmit="return validate()">
     <div class="col-md-6 col-md-offset-3">
     <div class="card">	
 	    <div class="card-body">
@@ -162,17 +178,16 @@ margin-left: 33.333333%;
       					<div class="card-body">
                           <i class="fa fa-volume-control-phone"></i><input type="number" name="contact"  placeholder="CONTACT" id="contact" class="form-control oh-autoval av-mobile" />
 								</div>
-								<div class="card-body">
+								<!-- <div class="card-body">
                                 <i class="fa fa-user"></i><input type="text" name="type"  placeholder="MAJOR ATTRACTION" id="type" av-message="Feild is Mandatory" class="form-control oh-autoval av-required" />
 								</div>
 								<div class="card-body">
                                 <i class="fa fa-user"></i><input type="text" name="n_o_t"  placeholder="AVILABLE TICKETS" id="n_o_t" av-message="Feild is Mandatory" class="form-control oh-autoval av-required" />
                                     </div>
                                     <div class="card-body">
-                                    <i class="fa fa-user"></i><input type="text" name="amount"  placeholder="AMOUNT" id="amonunt" av-message="Feild is Mandatory" class="form-control oh-autoval av-required" />
+                                    <i class="fa fa-user"></i><input type="text" name="amount"  placeholder="AMOUNT" id="amonunt" av-message="Feild is Mandatory" class="form-control oh-autoval av-required" /> -->
                                     </div>
-                                    
-										<button type="submit" class="btn btn-default" name="submit" id="submit" action="php/addplace.php">Submit</button>
+										<button type="submit" class="btn btn-default" name="submit" id="submit" action="php/addplaceu.php">Submit</button>
 								</div>
  				    </form>
         </div>

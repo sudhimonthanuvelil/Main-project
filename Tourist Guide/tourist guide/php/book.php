@@ -60,7 +60,7 @@
                         </div>
                         <div class="collapse navbar-collapse navbar-ex1-collapse padd0">
                             <ul class="nav navbar-nav">
-                                <li class="dropdown"><a href="../adminhome.php">HOME</a>
+                                <li class="dropdown"><a href="../regis/userhome.php">HOME</a>
                                    
                                 </li>
                                 
@@ -72,68 +72,74 @@
     </div>
 
 
-<?php
-include 'connect.php'; 
-//$id=$_SESSION['userid'];
- $qry ="SELECT * From users_registration_tbl as r, login_tbl as l,  org_tbl as o ,district as d WHERE r.Status='0' and r.userid=l.userid and r.D_id=d.D_id and r.org_id=o.org_id";
- //echo $qry;
-	$records= mysqli_query($connection,$qry);
-?>
 <html>
-<head>
-<title>Organization Details</title>
-</head>
-<body>
-<table width="100%" border="1" cellpadding="1" cellspacing="1">
-<tr>
-<th>Organization Name</th>
-<th>Type of Organization</th>
-<th>Description</th>
-<th>Licence No</th>
-<th>Place</th>
-<th>District</th>
-<th>Email</th>
-<th>Mobile</th>
-<th>Photo</th>
-<!-- <th>Cancel</th>  -->
-<tr>
-<?php
+        <body>
+        <style>
+        .card {
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+        border: 0;
+        }
+        .card {
+        position: relative;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #ffffffb0;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: .25rem;
+        }
+        .card-body {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        padding: 1.25rem;
+        }
+        .card, .navbar-nav {
+        display: -ms-flexbox;
+        }
+        *, ::after, ::before {
+        box-sizing: border-box;
+        }
+        .mb-4, .my-4 {
+        margin-bottom: 1.5rem!important;
+        }
+       
+        .col-md-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        }
+        .offset-4 {
+        margin-left: 33.333333%;
+        }
+        </style>
+        <!DOCTYPE html>
+        <?php
+        $id=$_POST['place'];
+        ?>
+        <form action="booking.php" method="post" enctype="multipart/form-data" id="adplace" name="adplace">
+            <div class="col-md-4 offset-4">
+            <div class="card">	
+                <div class="card-body">
+                                                <label for="place name"> Place Name:</label>
+                                              <input id="place" type="text" value="<?php echo "$id" ?>" name="place" class="av-name form-control" av-message="Invalid Name" required="">
+                                        </div>
+                                        
+                            <div class="card-body">
+                                <label for="ticketdate">Ticket date:</label>
+                                <input type="date" name="ticdate"  id="ticdate" class="av-name form-control" av-message="Invalid House Name"></textarea>
+            
+                            </div>
+                            <div class="card-body">
+                                                    <label for="noticket">Number of Ticket:</label>
+                                                    <input id="noc" name="noc" class="av-name form-control" av-message="Invalid Place" required=""><br>
+                                                    <button type="submit" class="btn btn-default" name="submit" id="submit">Book</button>
+                                            </div>
+                                            
+                                        </body>
 
 
-while($user=mysqli_fetch_assoc($records)){
-	// $did=$user['Did'];
-	// $dist="select * from district where D_id='$did'";
-	// $record= mysqli_query($connection,$dist);
-	// $dis=mysqli_fetch_assoc($record);
-
-echo "<tr>";
-echo "<td>".$user['org_name']."</td>";
-echo "<td>".$user['org_type']."</td>";
-echo "<td>".$user['org_desc']."</td>";
-echo "<td>".$user['licno']."</td>";
-echo "<td>".$user['Place']."</td>";
-echo "<td>".$user['district_name']."</td>";
-echo "<td>".$user['user_name']."</td>";
-echo "<td>".$user['Mobile']."</td>";
-echo '<td><img src="'.$user['profile_pic'].'" width="150px" height="150px"></td>';
-// echo "<td>".$user['Aadhar']."</td>";
-
-
-//echo "<td><a onclick='SAVE'  href='aprov.php?id=".$user['userid']."'>APPROVE</a> | <a href='delete.php?id=".$user['userid']."'>DELETE</a></td>";
-echo "<td><a href='aprovs.php?id=".$user['userid']."' onClick=\"return confirm('Are you sure you want to Approve?')\">APPROVE</a> |<a href='deletes.php?id=".$user['userid']."' onClick=\"return confirm('Are you sure you want to remove?')\">REMOVE</a></td>";
-
-
-echo "</tr>";
-
-
-
-}
-?>
-</tr>
-</tr>
-</table>
-</body>
-</html>
-
-
-
+                                        </html>

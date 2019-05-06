@@ -46,13 +46,7 @@
                     
                 </ul>
 
-                <!-- <ul class="list-inline pull-right button">
-                    <li><a href="login.html">Login</a>
-                        <a href="register.html">Register</a>
-                    </li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul> -->
+                
             </div>
         </div>
     </div>
@@ -60,42 +54,7 @@
 
     <!-- header start here-->
     <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4 col-md-4 col-xs-12">
-                    <div class="social-icon">
-                        <ul class="list-inline">
-                            <li>
-                                <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://in.pinterest.com/" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-                            </li>
-                            <li><a href="https://photos.google.com/" target="_blank"><i class="social_picassa"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-sm-4 col-md-4 col-xs-12">
-                    <div id="logo">
-                        <a href="index-2.html"><img class="img-responsive" src="images/logo.png" alt="logo" title="logo" /></a>
-                    </div>
-                </div>
-               
-            </div>
-        </div>
-    </header>
-    <!-- header end here -->
-
+      
 
     <!-- menu start here -->
     <div id="menu">
@@ -154,9 +113,9 @@
                     <div class="col-sm-6">
                         <div class="loginto">
                             <h2>Login to Your account</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat.</p>
+                            <p>This will helps the tourist who want to visit a place. This contains the major tourist places all over in kerala</p>
                             <div class="donot">Don't have account -
-                                <a href="register.php">register Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                                <a href="">register Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
@@ -179,15 +138,8 @@
                                     <a href="mails/forgotpassword.php" class="pull-right">Forgot Password?</a>
                                 </div>
                                 <input type="submit" name="submit" id="submit" value="Login now" class="btn btn-primary btn-block" />
-                                <div class="or">
-                                    <span>or</span>
-                                    <hr/>
-                                </div>
-                                <ul class="list-unstyled">
-                                    <li><a href="https://www.facebook.com/" target="_blank" class="fb"><i class="fa fa-facebook"></i> Login Via Facebook</a></li>
-                                    <li><a href="https://twitter.com/" target="_blank" class="tw"><i class="fa fa-twitter"></i> Login Via Twitter</a></li>
-                                    <li><a href="https://plus.google.com/" target="_blank" class="gp"><i class="fa fa-google-plus"></i> Login Via Google+</a></li>
-                                </ul>
+                                
+                            
                             </form>
                         </div>
                     </div>
@@ -208,18 +160,7 @@
                             <p>© Copyright 2019. <span>Tourist Guide </span> by Multimedia</p>
                         </div>
                         <div class="col-sm-6 padd0 text-right">
-                            <div class="social-icon">
-                                <ul class="list-inline">
-                                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                    <li><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                    <li><a href="https://in.pinterest.com/" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-                                    <li><a href="https://photos.google.com/" target="_blank"><i class="social_picassa"></i></a></li>
-                                    <li><a href="https://www.youtube.com/?gl=IN" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
+                            <!--  -->
                         </div>
                     </div>
                 </div>

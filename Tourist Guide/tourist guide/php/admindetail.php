@@ -21,31 +21,28 @@ include 'connect.php';
 
 //$qry ="SELECT * From users_registration_tbl as t,tb_place as p, tb_district as d,tb_category as c WHERE t.$userid='$id' and t.Pid=p.Pid and p.Did=d.Did and t.cat_id=c.cat_id";
 //echo "$qry";
-
-
-
 $qry ="SELECT * From users_registration_tbl as r, login_tbl as l, district as d WHERE r.userid='$id' and r.userid=l.userid and r.D_id=d.D_id";
 //echo $qry;
 $records= mysqli_query($connection,$qry);
 //	$records= mysqli_query($connectionnection,$qry);
 	if(mysqli_num_rows($records)>=1){
-		while($rows = mysqli_fetch_array($records)) {
-			
+		while($row = mysqli_fetch_array($records)) {
+		
 
-
-	$fn =  $rows['First_name'];
-    $ln =  $rows['Last_name'];
-    $mob =  $rows['Mobile'];
-    $pl =  $rows['Place'];
-	$email =  $rows['Email'];
-	$pho =  $rows['profile_pic'];
-	  $ed =  $rows['district_name'];
+	$fn =  $row['First_name'];
+    $ln =  $row['Last_name'];
+    $mob =  $row['Mobile'];
+    $pl =  $row['Place'];
+	$email =  $row['Email'];
+	$pho =  $row['profile_pic'];
+	$ed =  $row['district_name'];
   
 		}
 	}
 ?>
 
 <!-- banner -->
+
 
 <html>
 	<head>
@@ -131,7 +128,7 @@ margin-left: 33.333333%;
 
     <!-- header start here-->
     <header>
-       
+      
     </header>
     <!-- header end here -->
 
@@ -147,37 +144,42 @@ margin-left: 33.333333%;
                         </div>
                         <div class="collapse navbar-collapse navbar-ex1-collapse padd0">
                             <ul class="nav navbar-nav">
-                                <li class="dropdown"><a href="../regis/userhome.php">HOME</a>
+                                <li class="dropdown"><a href="../adminhome.php">HOME</a>
                                    
-                               
+                                
                     </nav>
                 </div>
             </div>
         </div>
     </div>
-<div>
+
             <form id="employee" name="employee" enctype="multipart/form-data" action="editse.php" class="oh-autoval-form mt-5 mb-5 " method="post" onsubmit="return">
 			<div class="col-md-4 offset-4">
 			<div class="card">	
-			<div class="card-body">		
+			<div class="card-body">	
 									<label for="first name"> First Name:</label><br>
 							  	<input id="fn" type="text" value="<?php echo "$fn" ?>" name="fn" class="av-name form-control" av-message="Invalid Name" required="">
 							</div>
 							
-							<div class="card-body">
+                <div class="card-body">
                     <label for="house name">Last Name:</label>
                     <br><input type="text" name="ln"  id="ln" value="<?php echo "$ln" ?>" class="av-name form-control" av-message="Invalid House Name"></textarea>
 
                 </div>
               
-				<div class="card-body">
+								<div class="card-body">
 										<label for="place">Place:</label><br>
 										<input id="pl" name="pl" value="<?php echo "$pl" ?>" class="av-name form-control" av-message="Invalid Place" required="">
 								</div>
+								
+                                
+								<div class="card-body">
+										<label for="email">Email:</label><br>
+										<input type="email" id="email" value="<?php echo "$email" ?>" name="email" class="av-email form-control" av-message="Invalid email address" required="">
+								</div>
                                 <div class="card-body">
-                                <label for="district">District:</label><br>
-                                    <select id="dis" name="dis" class="form-control">
-                                    <i class="fa fa-envelope"></i><option value='<?php echo "$ed" ?>'><?php echo "$ed" ?> </option>
+                                    <Select name="District" id="District" name="ed" class="form-control" /><br>
+                                    <i class="fa fa-envelope"></i><option value="-1">SELECT DISTRICT</option>
 
                                         <?php                                                                                         //PHP code for district select
                                         $q=mysqli_query($connection,"SELECT D_id,district_name from district where status=1");
@@ -185,25 +187,21 @@ margin-left: 33.333333%;
                                             echo '<option value=' .$row['D_id'] . '>' .$row['district_name']. '</option>';
                                         }
                                         ?>
-                                        </select>
+									
 								</div>
-								<div class="card-body">
-										<label for="email">Email:</label><br>
-										<input type="email" id="email" value="<?php echo "$email" ?>" name="email" class="av-email form-control" av-message="Invalid email address" required="">
-								</div>
-								<div class="card-body">
-                                        <label for="photo">Photo:</label>
-                                        <img src='<?php echo "$pho" ?>' class="avatar" />
-										<input type="file"  id ="fileupload" name="fileupload" class="av-image form-control" av-message="Invalid Image Format" required="">
+      					<div class="card-body">
+										<label for="photo">Photo:</label>
+										<input type="file" value="<?php echo "$pho" ?>" id ="fileupload" name="fileupload" class="av-image form-control" av-message="Invalid Image Format" required="">
 								</div>
 								<div class="card-body">
 										<label for="mob">Mobile:</label><br>
 										<input id="mob" type="text" value="<?php echo "$mob" ?>" name="mob" class="av-mobile form-control" av-message="Invalid mobile" required="">
 								</div>
+                                
 								<div class="card-body">
 										<button type="submit" class="btn btn-default" name="submit" id="submit" action="../php/edits.php">Submit</button>
-                                </div>
-                                    </div>
+								</div>
+                                
  				    </form>
         </div>
 		</div>

@@ -34,58 +34,30 @@ include('php/connect.php')
     <link href="js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="header2">
-    <!-- top start here -->
-    <div id="top">
-        <div class="container">
-            <div id="top-links" class="nav">
-                <ul class="list-inline pull-left">
-                    <li>
-                        <a href="#">Welcome to Tourist Guide</a>
-                    </li>
-                    <li><a href="contact.html">Email :Touristguide@gmail.com</a></li>
-                </ul>
 
-                
-            </div>
-        </div>
-    </div>
     <!-- top end here -->
 
     <!-- header start here-->
     <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 col-md-3 col-xs-12">
-                    <div id="logo">
-                        <a href="index-2.html"><img class="img-responsive" src="images/logo2.png" alt="logo" title="logo" /></a>
-                    </div>
-                </div>
-
-                
-                <div class="col-sm-2 col-md-2 col-xs-12 text-center">
-                    <div class="phone">
-                        
-						
-                    </div>
-                </div>
-            </div>
-        </div>
+                       
     </header>
     <!-- header end here -->
 
     <!-- menu start here -->
     <div id="menu">
+    <img width="50px" height="50px "class="img-responsive" src="images/logo.png" alt="logo" title="logo" />
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-12 col-xs-12">
-                    <nav class="navbar">
+                 <div class="col-sm-12 col-md-12 col-xs-12">
+                <nav class="navbar">
                         <div class="navbar-header">
                             <span class="menutext visible-xs">Menu</span>
                             <button data-target=".navbar-ex1-collapse" data-toggle="collapse" class="btn btn-navbar navbar-toggle" type="button"><i class="fa fa-bars" aria-hidden="true"></i></button>
                         </div>
+                        
                         <div class="collapse navbar-collapse navbar-ex1-collapse padd0">
                             <ul class="nav navbar-nav">
+                                
                                 <li class="dropdown"><a href="">HOME</a>
                                    
                                 </li>
@@ -93,31 +65,31 @@ include('php/connect.php')
                                     <div class="dropdown-menu">
                                         <div class="dropdown-inner">
                                             <ul class="list-unstyled">
-                                                <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>Approve Place</a></li>
+                                                <li><a href="php/placeapprv.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Approve Place</a></li>
                                                 <li><a href="Addplace.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Add Place</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>Edit Place</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>Remove Place</a></li>
+                                                <li><a href="php/Editplace.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Edit Place</a></li>
+                                                
                                             </ul>
                                         </div>
                                     </div>
                                 </li>
-                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">USERS</a>
+                                <li class="dropdown"><a href="php/viewuser.php">USERS</a>
+                                <!-- <li><a href="php/viewuser.php" class="dropdown-toggle" data-toggle="dropdown">USERS</a> -->
                                 <div class="dropdown-menu">
                                     <div class="dropdown-inner">
                                         <ul class="list-unstyled">
-                                            <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>User</a></li>
-                                            <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>Business Organization</a>
-                                            </li>
-                                            
-                                        </ul>
+                                            <li><a href="php/viewuser.php"><i class="fa fa-angle-right" aria-hidden="true"></i>User</a></li>
+                                            <!-- <li><a href="php/aprov.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Business Organization</a> -->
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">PAGES</a>
+                                </li>
+                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">BUSINESS ORGANIZATION</a>
                                     <div class="dropdown-menu">
                                         <div class="dropdown-inner">
                                             <ul class="list-unstyled">
-                                                <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>Gallery</a></li>
+                                                <li><a href="php/aprov.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Approve</a></li>
+                                                <li><a href="php/vieworg.php"><i class="fa fa-angle-right" aria-hidden="true"></i>View</a></li>
                                               </ul>
                                         </div>
                                     </div>
@@ -139,7 +111,7 @@ include('php/connect.php')
                                 <div class="dropdown-menu">
                                 <div class="dropdown-inner">
                                     <ul class="list-unstyled">
-                                        <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>Edit Profile</a></li>
+                                        <li><a href="php/admindetail.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Edit Profile</a></li>
                                         <li><a href="php/logout.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Logout</a></li>
                                          </ul>
                                 </div>

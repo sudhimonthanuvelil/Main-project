@@ -28,7 +28,7 @@ include "../php/connect.php";
     <link href="../js/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
     <link href="../js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
 
-    Adding oh-autoVal css style
+    <!-- Adding oh-autoVal css style -->
     <link rel="stylesheet" type="text/css" href="../js/jsval/oh-autoval-style.css">
     <!-- Adding jQuery script. It must be before other script files -->
     <script src="../js/jsval/jquery.min.js"> </script>
@@ -37,56 +37,8 @@ include "../php/connect.php";
 </head>
 
 <body>
-    <!-- top start here -->
-    <div id="top">
-        <div class="container">
-            
-        
-                            </div>
-                        </form>
-                    </li>
-                    <li>
-                        
-                            </div>
-                        </form>
-                    </li>
-                </ul>
+    
 
-                <ul class="list-inline pull-right button">
-                    <li><a href="../login.php">Login</a>
-                        <!-- <a href="register.php">Register</a> -->
-                    </li>
-                    <!-- <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li> -->
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- top end here -->
-
-    <!-- header start here-->
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4 col-md-4 col-xs-12">
-                    <div class="social-icon">
-                        <ul class="list-inline">
-                     
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-sm-4 col-md-4 col-xs-12">
-                    <div id="logo">
-                        <a href="index-2.html"><img class="img-responsive" src="images/logo.png" alt="logo" title="logo" /></a>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-xs-12">
-                    
-                </div>
-            </div>
-        </div>
-    </header>
     <!-- header end here -->
 
     <!-- menu start here -->
@@ -106,50 +58,7 @@ include "../php/connect.php";
                                         
                                     </div>
                                 </li>
-                                <!-- <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">TOUR</a>
-                                    <div class="dropdown-menu">
-                                        <div class="dropdown-inner">
-                                            <ul class="list-unstyled">
-                                                <li><a href="tour-grid-view.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Tour</a></li>
-                                                <li><a href="tour-detail-view.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Tour Detail</a></li>
-                                                <li><a href="tour-booking-form.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Tour Booking Form</a></li>
-                                                <li><a href="thank-you.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Thank You</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a href="guides.html">GUIDES</a></li>
-                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">BLOG</a>
-                                    <div class="dropdown-menu">
-                                        <div class="dropdown-inner">
-                                            <ul class="list-unstyled">
-                                                <li><a href="blog.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Blog</a></li>
-                                                <li><a href="blog-detail.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Blog Detail</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">PAGES</a>
-                                    <div class="dropdown-menu">
-                                        <div class="dropdown-inner">
-                                            <ul class="list-unstyled">
-                                                <li><a href="gallery.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Gallery</a></li>
-                                                <li><a href="error-404.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Error-404</a></li>
-                                                <li><a href="faq.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Faq</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">USER</a>
-                                    <div class="dropdown-menu">
-                                        <div class="dropdown-inner">
-                                            <ul class="list-unstyled">
-                                                <li><a href="login.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Login</a></li>
-                                                <li><a href="register.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Register</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li> -->
+                                <li class="dropdown"><a href="../login.php" class="dropdown-toggle" data-toggle="dropdown">LOGIN</a>
                                 <li><a href="">ABOUT</a></li>
                                 <li><a href="">CONTACT</a></li>
                             </ul>
@@ -163,12 +72,11 @@ include "../php/connect.php";
 
     <!-- breadcrumb start here -->
     <div class="bread-crumb">
+    <img width="100px" height="100px" align="right" class="img-responsive"  src="../images/logo.png" alt="logo" title="logo" />
         <div class="container">
+            
             <h2>User Register</h2>
-            <!-- <ul class="list-inline">
-                <li><a href="index-2.html">home</a></li>
-                <li><a href="register.html">Register</a></li>
-            </ul> -->
+            
         </div>
     </div>
     <!-- breadcrumb end here -->
@@ -184,9 +92,9 @@ include "../php/connect.php";
                     <div class="col-sm-6">
                         <div class="loginto">
                             <h2>Register Your account</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat.</p>
+                            <p>This will helps the tourist who want to visit a place. This contains the major tourist places all over in kerala</p>
                             <div class="donot">Already have a account -
-                                <a href="login.html">Login Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                                <a href="../login.php">Login Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
@@ -212,7 +120,7 @@ include "../php/connect.php";
                                    <input type="file" id="photo"  class="form-control" name="Photo"accept=".jpg,.jpeg,.png" required>
                                         <label for="form3"></label>
                                       </div>
-                                      </div> -->
+                                      </div> --> 
                 <div class="form-group">
                     <label for="photo">Photo:</label>
                     <input type="file" name="fileupload" accept="image/*" size="70" id="fileupload"/>

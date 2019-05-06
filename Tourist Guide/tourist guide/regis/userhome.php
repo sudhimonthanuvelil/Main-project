@@ -40,9 +40,9 @@ include('../php/connect.php');
             <div id="top-links" class="nav">
                 <ul class="list-inline pull-left">
                     <li>
-                        <a href="#">Welcome to Tourist Guide</a>
+                        <a href="">Welcome to Tourist Guide</a>
                     </li>
-                    <li><a href="contact.html">Email :Touristguide@gmail.com</a></li>
+                    <li><a href="">Email :Touristguide@gmail.com</a></li>
                 </ul>
 
                 <ul class="list-inline pull-right button">
@@ -54,7 +54,7 @@ include('../php/connect.php');
     <!-- top end here -->
 
     <!-- header start here-->
-    <header>
+    <!-- <header>
         <div class="container">
             <div class="row">
                 <div class="col-sm-3 col-md-3 col-xs-12">
@@ -76,8 +76,8 @@ include('../php/connect.php');
                             </fieldset>
                         </form>
                     </div>
-                </div>
-                <div class="col-sm-2 col-md-2 col-xs-12 text-center">
+                </div> -->
+                <!-- <div class="col-sm-2 col-md-2 col-xs-12 text-center">
                     <div class="phone">
                         <span><i class="fa fa-phone" aria-hidden="true"></i>
 						Help Desk</span>
@@ -85,7 +85,7 @@ include('../php/connect.php');
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </header>
     <!-- header end here -->
 
@@ -108,20 +108,20 @@ include('../php/connect.php');
                                     <div class="dropdown-menu">
                                         <div class="dropdown-inner">
                                             <ul class="list-unstyled">
-                                                <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>View Place</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>Add Place</a></li>
+                                                <li><a href="../php/viewplace.php"><i class="fa fa-angle-right" aria-hidden="true"></i>View Place</a></li>
+                                                <li><a href="../userplaceadd.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Add Place</a></li>
                                                 
                                             </ul>
                                         </div>
                                     </div>
                                 </li>
                                
-                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">USERS</a>
+                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">BUSINESS ORGANIZATION</a>
                                     <div class="dropdown-menu">
                                         <div class="dropdown-inner">
                                             <ul class="list-unstyled">
-                                                <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>User</a></li>
-                                                <li><a href="../php/aprov.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Business Organization</a></li>
+                                                <!-- <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>User</a></li> -->
+                                                <li><a href="../php/vieworgs.php"><i class="fa fa-angle-right" aria-hidden="true"></i>View</a></li>
                                                 
                                             </ul>
                                         </div>
@@ -138,25 +138,27 @@ $sql="SELECT * FROM users_registration_tbl WHERE userid=$tid";
 $result=mysqli_query($connection,$sql);
 $i=0;
 $row=mysqli_fetch_array($result);
-//echo $img=$row['profile_pic'];
-    ?>
-         <li><a href="">	<?php echo $row['First_name'];?></a></li>
 
+ $img=$row['profile_pic'];
+    ?>
+        
 	
     <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
-	<img src="<?php echo $row['profile_pic']?>" class="avatar" />
+	<img src='<?php echo "$img" ?>' class="avatar" />
                                     <!-- <img src="images\b2.png" alt="Avatar" class="avatar"> -->
                                 </a>
                                 <div class="dropdown-menu">
                                 <div class="dropdown-inner">
                                     <ul class="list-unstyled">
-                                        <li><a href="../php/profile.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Edit Profile</a></li>
+                                        <li><a href="../php/userdetail.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Edit Profile</a></li>
                                         <li><a href="../php/logout.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Logout</a></li>
                                          </ul>
                                 </div>
                                 </div>
                                 </li>
+                                <li><a href="">	<?php echo $row['First_name'];?></a></li>
+
                         
                             </ul>
                         </div>
@@ -288,7 +290,7 @@ $row=mysqli_fetch_array($result);
                             <div class="in"><a href="#"> : (+91)123457890, (1234)</a></div>
                         </li>
                         
-                    </ul>
+                    </ul>   
                     <div class="footersrch">
                         <p>Sign up for our Lorem ipsum dolor sit amet,</p>
                         

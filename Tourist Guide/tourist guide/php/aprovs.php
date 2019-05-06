@@ -24,18 +24,11 @@ $sqls="UPDATE users_registration_tbl set Status=1 where `userid` = '$id'";
 //echo $sqls;
 $ress=mysqli_query($connection, $sqls);
 
- //$sql="update table login_tbl set status=1 where `userid` = '$id'";
- //$res=mysqli_query($connection, $sql);
-
-// if($res=1)
-// {
-//  if($ress=1)
-
-//       {
-//          <script>
+ 
+    //      <script>
 //         //echo"<script>alert('Approved.........');
  
-//         //document.location=('aprov.php');
+//document.location=('aprov.php');
 //         </script>";
 //       }
 //     }   

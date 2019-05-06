@@ -73,67 +73,50 @@
 
 
 <?php
-include 'connect.php'; 
-//$id=$_SESSION['userid'];
- $qry ="SELECT * From users_registration_tbl as r, login_tbl as l,  org_tbl as o ,district as d WHERE r.Status='0' and r.userid=l.userid and r.D_id=d.D_id and r.org_id=o.org_id";
- //echo $qry;
-	$records= mysqli_query($connection,$qry);
+//session_start();
+include 'connect.php';
 ?>
 <html>
 <head>
-<title>Organization Details</title>
 </head>
 <body>
-<table width="100%" border="1" cellpadding="1" cellspacing="1">
-<tr>
-<th>Organization Name</th>
-<th>Type of Organization</th>
-<th>Description</th>
-<th>Licence No</th>
-<th>Place</th>
-<th>District</th>
-<th>Email</th>
-<th>Mobile</th>
-<th>Photo</th>
-<!-- <th>Cancel</th>  -->
-<tr>
+<div class="row">
+
 <?php
+ $sql = "SELECT * FROM `users_registration_tbl` where org_id ='0'";
+//print_r($sql);
+//return;
+$val = mysqli_query($connection, $sql);
+if ($val) {
+while ($result = mysqli_fetch_array($val)) {
+?> 
+<div class="col-md-3 pb-5">
+<div class="row" style="border:0px solid; padding:20px; background: #f5f5f5;margin: 10px; box-shadow: 0px 3px 5px rgba(100,100,100,.3)">
 
 
-while($user=mysqli_fetch_assoc($records)){
-	// $did=$user['Did'];
-	// $dist="select * from district where D_id='$did'";
-	// $record= mysqli_query($connection,$dist);
-	// $dis=mysqli_fetch_assoc($record);
+<div class="">
+<img width="30%" height="30%" src="<?php echo $result['profile_pic']; ?>"class="image1">
+</div> 
+<form action="" method="post">
+<label><b><?php echo $result['First_name']; ?></b></label><br>
+<label><b><?php echo $result['Last_name']; ?></b></label><br>
+<label><b><?php echo $result['Email']; ?></b></label><br>
+<label><b><?php echo $result['Place']; ?></b></label><br>
+<label><b><?php echo $result['Mobile']; ?></b></label>
 
-echo "<tr>";
-echo "<td>".$user['org_name']."</td>";
-echo "<td>".$user['org_type']."</td>";
-echo "<td>".$user['org_desc']."</td>";
-echo "<td>".$user['licno']."</td>";
-echo "<td>".$user['Place']."</td>";
-echo "<td>".$user['district_name']."</td>";
-echo "<td>".$user['user_name']."</td>";
-echo "<td>".$user['Mobile']."</td>";
-echo '<td><img src="'.$user['profile_pic'].'" width="150px" height="150px"></td>';
-// echo "<td>".$user['Aadhar']."</td>";
-
-
-//echo "<td><a onclick='SAVE'  href='aprov.php?id=".$user['userid']."'>APPROVE</a> | <a href='delete.php?id=".$user['userid']."'>DELETE</a></td>";
-echo "<td><a href='aprovs.php?id=".$user['userid']."' onClick=\"return confirm('Are you sure you want to Approve?')\">APPROVE</a> |<a href='deletes.php?id=".$user['userid']."' onClick=\"return confirm('Are you sure you want to remove?')\">REMOVE</a></td>";
-
-
-echo "</tr>";
-
-
-
+<!-- <button type="submit" class="btn btn-default" name="remove" id="remove" action="">Remove</button> -->
+<?php
+$sql1="SELECT * FROM `users_registration_tbl` where org_id ='0'";
+//print_r($sql);
+$val1 = mysqli_query($connection, $sql1);
+$result1 = mysqli_fetch_array($val1);
+//$place=$result1['Last_name'];
+?>
+</div>
+</div>
+<?php
+}
 }
 ?>
-</tr>
-</tr>
-</table>
 </body>
 </html>
-
-
-

@@ -72,68 +72,62 @@
     </div>
 
 
+
+
+
+
+
+
+    
+    
 <?php
-include 'connect.php'; 
-//$id=$_SESSION['userid'];
- $qry ="SELECT * From users_registration_tbl as r, login_tbl as l,  org_tbl as o ,district as d WHERE r.Status='0' and r.userid=l.userid and r.D_id=d.D_id and r.org_id=o.org_id";
- //echo $qry;
-	$records= mysqli_query($connection,$qry);
+//session_start();
+include 'connect.php';
 ?>
 <html>
 <head>
-<title>Organization Details</title>
 </head>
 <body>
-<table width="100%" border="1" cellpadding="1" cellspacing="1">
-<tr>
-<th>Organization Name</th>
-<th>Type of Organization</th>
-<th>Description</th>
-<th>Licence No</th>
-<th>Place</th>
-<th>District</th>
-<th>Email</th>
-<th>Mobile</th>
-<th>Photo</th>
-<!-- <th>Cancel</th>  -->
-<tr>
+<div class="row">
 <?php
+ $sql = "SELECT * FROM `addplace_tbl` where status='1'";
+//print_r($sql);
+//return;
+$val = mysqli_query($connection, $sql);
+if ($val) {
+while ($result = mysqli_fetch_array($val)) {
+?>
 
-
-while($user=mysqli_fetch_assoc($records)){
-	// $did=$user['Did'];
-	// $dist="select * from district where D_id='$did'";
-	// $record= mysqli_query($connection,$dist);
-	// $dis=mysqli_fetch_assoc($record);
-
-echo "<tr>";
-echo "<td>".$user['org_name']."</td>";
-echo "<td>".$user['org_type']."</td>";
-echo "<td>".$user['org_desc']."</td>";
-echo "<td>".$user['licno']."</td>";
-echo "<td>".$user['Place']."</td>";
-echo "<td>".$user['district_name']."</td>";
-echo "<td>".$user['user_name']."</td>";
-echo "<td>".$user['Mobile']."</td>";
-echo '<td><img src="'.$user['profile_pic'].'" width="150px" height="150px"></td>';
-// echo "<td>".$user['Aadhar']."</td>";
-
-
-//echo "<td><a onclick='SAVE'  href='aprov.php?id=".$user['userid']."'>APPROVE</a> | <a href='delete.php?id=".$user['userid']."'>DELETE</a></td>";
-echo "<td><a href='aprovs.php?id=".$user['userid']."' onClick=\"return confirm('Are you sure you want to Approve?')\">APPROVE</a> |<a href='deletes.php?id=".$user['userid']."' onClick=\"return confirm('Are you sure you want to remove?')\">REMOVE</a></td>";
-
-
-echo "</tr>";
+<div class="col-md-3 pb-5">
+<div class="row" style="border:0px solid; padding:20px; background: #f5f5f5;margin: 10px; box-shadow: 0px 3px 5px rgba(100,100,100,.3)">
 
 
 
+<div class="">
+<center><img width="250px" height="150px" src="<?php echo $result['image']; ?>"class="image1"></center>
+</div>
+<center>
+<form action="aprovp.php" method="post">
+<label><b><?php echo $result['place_name']; ?></b></label><br>
+<label><b><?php echo $result['discription']; ?></b></label><br>
+<label><b><?php echo $result['contact']; ?></b></label><br>
+<input type="hidden" name="place" value='<?php echo "$place" ?>'>
+<button type="submit" class="btn btn-default" name="place" id="place">APPROVE</button>
+</center>
+<!-- <label><b><?php echo $result['place_name']; ?></b></label><br> -->
+ <?php
+// $sql1="SELECT * FROM `addplace_tbl` where status='1'";
+// $val1 = mysqli_query($connection, $sql1);
+// $result1 = mysqli_fetch_array($val1);
+// $place=$result1['place_name'];
+
+?> 
+</div>
+</div>
+<?php
+}
 }
 ?>
-</tr>
-</tr>
-</table>
+
 </body>
 </html>
-
-
-

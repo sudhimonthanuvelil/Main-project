@@ -55,37 +55,9 @@ include('../php/connect.php')
 
     <!-- header start here-->
     <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 col-md-3 col-xs-12">
-                    <div id="logo">
-                        <a href="../index.html"><img class="img-responsive" src="images/logo2.png" alt="logo" title="logo" /></a>
-                    </div>
-                </div>
-
-                <div class="col-sm-7 col-md-7 col-xs-12">
-                    <div class="search">
-                        <form class="form-horizontal" method="post">
-                            <fieldset>
-                                <div class="form-group">
-                                    <input name="s" value="" class="form-control" placeholder="Type Your Search" type="text">
-                                </div>
-                                <div>
-                                    <button type="submit" value="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-sm-2 col-md-2 col-xs-12 text-center">
-                    <div class="phone">
-                        <span><i class="fa fa-phone" aria-hidden="true"></i>
-						Help Desk</span>
-                        <p>+91 9876543210</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
+                
+                
     </header>
     <!-- header end here -->
 
@@ -101,34 +73,24 @@ include('../php/connect.php')
                         </div>
                         <div class="collapse navbar-collapse navbar-ex1-collapse padd0">
                             <ul class="nav navbar-nav">
-                                <li class="dropdown"><a href="../index.html">HOME</a>
+                                <li class="dropdown"><a href]="">HOME</a>
                                    
                                 </li>
                                 <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">ORGANIZATION</a>
                                     <div class="dropdown-menu">
                                         <div class="dropdown-inner">
                                             <ul class="list-unstyled">
-                                                <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>Add organization</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>view organization</a></li>
+                                                
+                                                <li><a href="../php/vieworgs.php"><i class="fa fa-angle-right" aria-hidden="true"></i>view organization</a></li>
                                                 <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>Update organization</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>Delete organization</a></li>
+                                                
                                                 
                                             </ul>
                                         </div>
                                     </div>
                                 </li>
                                
-                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">PAGES</a>
-                                    <div class="dropdown-menu">
-                                        <div class="dropdown-inner">
-                                            <ul class="list-unstyled">
-                                                <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>Gallery</a></li>
-
-                                                
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
+                                
                                 
                                 <li><a href="">ABOUT</a></li>
                                 <li><a href="">CONTACT</a></li>
